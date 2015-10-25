@@ -112,13 +112,13 @@ body {
 	color:#fff;
 	text-shadow:none;
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 }
 ::selection {
 	color:#fff;
 	text-shadow:none;
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 }
 ::-webkit-scrollbar {
 	width:5px;
@@ -166,7 +166,7 @@ a {
 }
 a:hover {
 	/*color:#c21e0a !important;*/
-	color: #187130 !important;
+	color: #204420 !important;
 }
 p {
 	font-family:'ubunturegular';
@@ -232,7 +232,7 @@ label {
 	margin-right:20px;
 	color:#fff;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 }
 .show {
 	display:block !important;
@@ -329,7 +329,7 @@ section {
 .single-page-title {
 	text-align:center;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 	font-size:50px;
 	line-height:1;
 	padding-top:5px;
@@ -369,7 +369,7 @@ section {
 	z-index:9999999;
 	cursor:pointer;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 
 	height:80px;
 	width:80px;
@@ -392,7 +392,7 @@ section {
 	-ms-transition:all 0.3s ease-in-out;
 	z-index:9999999;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 	position:fixed;
 	height:80px;
 	width:80px;
@@ -457,7 +457,7 @@ section {
 	top:45%;
 	padding:0px 15px 0px 30px;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 
 	z-index:9999999;
 	color:#fff;
@@ -495,7 +495,7 @@ section {
 	top:80px;
 	z-index:9999999;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 
 	width:80px;
 	padding-top:10px;
@@ -560,7 +560,7 @@ section {
 .event-container h5:hover
 {
     /*color:#c21e0a;*/
-	color: #187130;
+	color: #204420;
 }
 /* ================= POPUP PAGE================== */
 .reveal-modal-bg {
@@ -708,14 +708,14 @@ nav ul li ul li {
 #tabs a:hover {
 	color:#fff !important;
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 }
 #tabs a:focus {
 	outline:0;
 }
 #tabs #current a {
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 	color:#fff;
 }
 #tab-content {
@@ -756,7 +756,7 @@ nav ul li ul li {
 }
 #tab-content li img:hover {
 	/*border:5px solid #c21e0a;*/
-	border:5px solid #187130;
+	border:5px solid #204420;
 	opacity: 0.5;
 }
 /* ==== RESPONSIVE IFRAME ==== */
@@ -887,7 +887,7 @@ nav ul li ul li {
 .post-img {
 	background-position:center center;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 
 	margin-bottom:20px;
 	display:block;
@@ -936,7 +936,7 @@ ul.pagination li a {
 }
 ul.pagination li:hover a,ul.pagination li a:focus {
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 	color:#fff !important;
 }
 ul.pagination li.unavailable a {
@@ -948,13 +948,13 @@ ul.pagination li.unavailable:hover a,ul.pagination li.unavailable a:focus {
 }
 ul.pagination li.current a {
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 	color:#fff;
 	cursor:default
 }
 ul.pagination li.current a:hover {
 	/*background:#c21e0a;*/
-	background: #187130;
+	background: #204420;
 	color: #fff;
 }
 /* ================= COMMENTS ================== */
@@ -1018,7 +1018,7 @@ ul.pagination li.current a:hover {
 .comments a.reply:hover {
 	color:#fff !important;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 }
 /* ================= FORM ELEMENTS ================== */	.contactform {
 	clear:both;
@@ -1084,7 +1084,7 @@ textarea {
 	transition:background-color 0.15s ease-in-out;
 	border:none !important;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 }
 .button:hover,.all-button:hover {
 	color:#000 !important;
@@ -1110,7 +1110,7 @@ textarea {
 	transition:background-color 0.15s ease-in-out;
 	border:none !important;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 }
 .searchbox {
 	 font-family:'ubunturegular';
@@ -1171,7 +1171,7 @@ textarea {
 	background-position:center center;
 	display:block;
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 	outline:none;
 }
 #tiles li a.photo {
@@ -1232,11 +1232,11 @@ textarea {
 }
 #filters li.active {
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 }
 #filters li.active:hover {
 	/*background-color:#c21e0a;*/
-	background-color: #187130;
+	background-color: #204420;
 	color:#fff !important;
 }
 #filters li:hover {

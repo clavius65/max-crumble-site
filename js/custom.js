@@ -45,7 +45,7 @@ function openeffect() {
 function background() {
     "use strict";
     if ($(window).width() > 480) {
-        homebody.backstretch("images/photos/concert.jpg");
+        homebody.backstretch("images/bg.png");
         $('.main').find(".about").backstretch("images/photos/main_about.jpg");
         $('.main').find(".albums").backstretch("images/photos/main_albums.jpg");
         $('.main').find(".news").backstretch("images/photos/main_news.jpg");
