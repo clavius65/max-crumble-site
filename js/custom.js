@@ -48,9 +48,7 @@ function background() {
         homebody.backstretch("images/bg.png");
         $('.main').find(".about").backstretch("images/photos/main_about.jpg");
         $('.main').find(".albums").backstretch("images/photos/main_albums.jpg");
-        $('.main').find(".news").backstretch("images/photos/main_news.jpg");
-        $('.main').find(".events").backstretch("images/photos/main_events.jpg");
-        $('.main').find(".blog").backstretch("images/photos/main_blog2.jpg");
+        $('.main').find(".blog").backstretch("images/photos/main_blog.jpg");
         $('.main').find(".contact").backstretch("images/photos/main_contact.jpg");
     }
 }

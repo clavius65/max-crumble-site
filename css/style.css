@@ -111,13 +111,11 @@ body {
 ::-moz-selection {
 	color:#fff;
 	text-shadow:none;
-	/*background:#c21e0a;*/
 	background: #204420;
 }
 ::selection {
 	color:#fff;
 	text-shadow:none;
-	/*background:#c21e0a;*/
 	background: #204420;
 }
 ::-webkit-scrollbar {
@@ -165,7 +163,6 @@ a {
 	text-decoration:none;
 }
 a:hover {
-	/*color:#c21e0a !important;*/
 	color: #204420 !important;
 }
 p {
@@ -231,7 +228,6 @@ label {
 	padding:5px 20px 5px 10px;
 	margin-right:20px;
 	color:#fff;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 }
 .show {
@@ -328,7 +324,6 @@ section {
 }
 .single-page-title {
 	text-align:center;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 	font-size:50px;
 	line-height:1;
@@ -368,7 +363,6 @@ section {
 	color:#fff;
 	z-index:9999999;
 	cursor:pointer;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 
 	height:80px;
@@ -391,7 +385,6 @@ section {
 	-o-transition:all 0.3s ease-in-out;
 	-ms-transition:all 0.3s ease-in-out;
 	z-index:9999999;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 	position:fixed;
 	height:80px;
@@ -433,7 +426,7 @@ section {
 }
 #gallery {
 	top:0;
-	right:240px;
+	right:160px;
 	background-position:center center;
 	background-image:url('../images/gallery.png');
 	background-repeat:no-repeat;
@@ -444,7 +437,7 @@ section {
 #blog {
 	position:fixed;
 	top:0;
-	right:160px;
+	right:80px;
 	background-position:center center;
 	background-image:url('../images/blog.png');
 	background-repeat:no-repeat;
@@ -456,7 +449,6 @@ section {
 	position:fixed;
 	top:45%;
 	padding:0px 15px 0px 30px;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 
 	z-index:9999999;
@@ -494,7 +486,6 @@ section {
 	position:fixed;
 	top:80px;
 	z-index:9999999;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 
 	width:80px;
@@ -559,7 +550,6 @@ section {
 }
 .event-container h5:hover
 {
-    /*color:#c21e0a;*/
 	color: #204420;
 }
 /* ================= POPUP PAGE================== */
@@ -707,14 +697,12 @@ nav ul li ul li {
 }
 #tabs a:hover {
 	color:#fff !important;
-	/*background:#c21e0a;*/
 	background: #204420;
 }
 #tabs a:focus {
 	outline:0;
 }
 #tabs #current a {
-	/*background:#c21e0a;*/
 	background: #204420;
 	color:#fff;
 }
@@ -755,7 +743,6 @@ nav ul li ul li {
 	transition:all 0.3s ease-in-out;
 }
 #tab-content li img:hover {
-	/*border:5px solid #c21e0a;*/
 	border:5px solid #204420;
 	opacity: 0.5;
 }
@@ -918,7 +905,6 @@ li.playing:after {
 }
 .post-img {
 	background-position:center center;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 
 	margin-bottom:20px;
@@ -967,7 +953,6 @@ ul.pagination li a {
 	color:#fff;
 }
 ul.pagination li:hover a,ul.pagination li a:focus {
-	/*background:#c21e0a;*/
 	background: #204420;
 	color:#fff !important;
 }
@@ -979,13 +964,11 @@ ul.pagination li.unavailable:hover a,ul.pagination li.unavailable a:focus {
 	background:transparent
 }
 ul.pagination li.current a {
-	/*background:#c21e0a;*/
 	background: #204420;
 	color:#fff;
 	cursor:default
 }
 ul.pagination li.current a:hover {
-	/*background:#c21e0a;*/
 	background: #204420;
 	color: #fff;
 }
@@ -1049,7 +1032,6 @@ ul.pagination li.current a:hover {
 }
 .comments a.reply:hover {
 	color:#fff !important;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 }
 /* ================= FORM ELEMENTS ================== */	.contactform {
@@ -1115,7 +1097,6 @@ textarea {
 	-o-transition:background-color 0.15s ease-in-out;
 	transition:background-color 0.15s ease-in-out;
 	border:none !important;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 }
 .button:hover,.all-button:hover {
@@ -1141,7 +1122,6 @@ textarea {
 	-o-transition:background-color 0.15s ease-in-out;
 	transition:background-color 0.15s ease-in-out;
 	border:none !important;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 }
 .searchbox {
@@ -1202,7 +1182,6 @@ textarea {
 #tiles li a {
 	background-position:center center;
 	display:block;
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 	outline:none;
 }
@@ -1263,11 +1242,9 @@ textarea {
 	width:auto !important;
 }
 #filters li.active {
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 }
 #filters li.active:hover {
-	/*background-color:#c21e0a;*/
 	background-color: #204420;
 	color:#fff !important;
 }
