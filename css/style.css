@@ -863,6 +863,38 @@ nav ul li ul li {
 {
     margin-bottom: 20px;
 }
+/* ================= AUDIO LIST ================== */
+.audio-list-player {
+
+}
+ol.audio-list {
+	margin: 30px 0 10px 0;
+}
+.audio-list li {
+	line-height:1.8em;
+}
+.audio-list li * {
+	color: #999 !important;
+	outline: none;
+}
+.audio-list li a:hover {
+	color: #fff !important;
+}
+.audio-list li span {
+	float: right;
+	margin-left:5px;
+}
+li.playing a:hover {
+	color: #009c14 !important;
+}
+li.playing * {
+	color: #009c14 !important;
+}
+li.playing:after {
+	content: '♬';
+	margin: 5px;
+	color: #009c14;
+}
 /* ================= BLOG POSTS ================== */
 .date {
 	float:right;
