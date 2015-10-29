@@ -882,6 +882,12 @@ li.playing:after {
 	margin: 5px;
 	color: #009c14;
 }
+/* ================= VIDEO PLAYER ================== */
+.video-player
+{
+	margin-bottom: 20px;
+}
+
 /* ================= BLOG POSTS ================== */
 .date {
 	float:right;
