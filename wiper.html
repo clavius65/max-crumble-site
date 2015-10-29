@@ -44,80 +44,17 @@
                 </blockquote>
             </div>
             <div class="grid-12 comment-link">
-                <a id="read-comments" class="all-button">Read Comments</a>
+                <a id="read-comments" class="all-button">Write a Comment</a>
             </div>
             <div class="grid-12">
                 <!-- Comments -->
                 <div class="comments_block">
-                    <h4>Comments</h4>
-
-                    <div class="comments">
-                        <p class="meta">
-                            <a href="#">User Name</a> - 5 November 2012 @ 08:13
-                        </p>
-
-                        <div class="comments_content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien odio, sit amet
-                                scelerisque felis. Maecenas tincidunt ligula eu magna tincidunt eget imperdiet erat
-                                malesuada. Ut in diam et metus facilisis venenatis sit amet vel enim. Duis semper
-                                elementum felis.
-                            </p>
-                            <a href="#" class="reply">Reply</a>
-
-                            <div class="clr">
-                            </div>
-                            <div class="reply_icon">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comments reply">
-                        <p class="meta">
-                            <a href="#">User Name</a> - 3 November 2012 @ 08:15
-                        </p>
-
-                        <div class="comments_content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien odio, sit amet
-                                felis scelerisque felis. Maecenas tincidunt ligula eu magna tincidunt eget imperdiet
-                                erat males. Ut in diam et metus facilisis venenatis sit amet vel enim. Duis semper
-                                elementum felis.
-                            </p>
-                            <a href="#" class="reply">Reply</a>
-
-                            <div class="clr">
-                            </div>
-                            <div class="reply_icon">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comments">
-                        <p class="meta">
-                            <a href="#">User Name</a> - 1 November 2012 @ 11:45
-                        </p>
-
-                        <div class="comments_content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien odio, sit amet
-                                scelerisque felis. Maecenas tincidunt ligula eu magna tincidunt eget imperdiet erat
-                                malesuada. Ut in diam et metus facilisis venenatis sit amet vel enim. Duis semper
-                                elementum felis.
-                            </p>
-                            <a href="#" class="reply">Reply</a>
-
-                            <div class="clr">
-                            </div>
-                            <div class="reply_icon">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Comment Form -->
-                    <h5>Write a Comment</h5>
+                    <h5>Tell Us What You Think</h5>
 
                     <form id="commentForm" action="commentForm.php" method="post">
-                        <input type="text" name="senderName" id="senderName" maxlength="40" placeholder="Your Name"/>
-                        <input type="text" name="senderEmail" id="senderEmail" maxlength="50" placeholder="Your Email"/>
-                        <textarea name="comment" id="comment" rows="5" cols="60" placeholder="Your Comment"></textarea>
+                        <input type="text" name="senderName" id="senderName" required="true" maxlength="40" placeholder="Your Name"/>
+                        <input type="text" name="senderEmail" id="senderEmail" required="true" maxlength="50" placeholder="Your Email"/>
+                        <textarea name="comment" id="comment" rows="5" cols="60" required="true" placeholder="Your Comment"></textarea>
                         <input name="subject" id="subject" type="hidden" value="Comment on Wiper"/>
                         <input type="submit" id="sendComment" name="sendComment" class="button" value="Send Comment"/>
                     </form>
