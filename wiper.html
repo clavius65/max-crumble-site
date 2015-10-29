@@ -32,15 +32,15 @@
             Wiper
         </div>
         <div class="grids">
-            <div class="audio-player">
-                <video src="video/wiper.m4v" width="100%" height="100%" preload="none"></video>
-            </div>
-
-            <div>
+            <div class="grid-12">
+                <div class="video-player">
+                    <video src="video/wiper.mp4" width="100%" height="100%" preload="none">
+                    </video>
+                </div>
                 <blockquote>
                     A Lorem ipsum dolor sit amet, consectet adipiscing elit. Ut vitae velit at velit pretiu sodales.
                     Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna
-                    mollis euismod. <cite>John Doe</cite>
+                    mollis euismod. <cite>Sheila Coppola</cite>
                 </blockquote>
             </div>
             <div class="grid-12 comment-link">
@@ -114,12 +114,12 @@
                     <!-- Comment Form -->
                     <h5>Write a Comment</h5>
 
-                    <form>
-                        <input id="senderName" type="text" placeholder="Your Name"/>
-                        <input id="senderEmail" type="text" placeholder="Your Email"/>
-                        <input id="website" type="text" placeholder="Website"/>
-                        <textarea id="comment" rows="5" cols="60" placeholder="Your Comment"></textarea>
-                        <input type="submit" class="button" value=" Send Comment"/>
+                    <form id="commentForm" action="commentForm.php" method="post">
+                        <input type="text" name="senderName" id="senderName" maxlength="40" placeholder="Your Name"/>
+                        <input type="text" name="senderEmail" id="senderEmail" maxlength="50" placeholder="Your Email"/>
+                        <textarea name="comment" id="comment" rows="5" cols="60" placeholder="Your Comment"></textarea>
+                        <input name="subject" id="subject" type="hidden" value="Comment on Wiper"/>
+                        <input type="submit" id="sendComment" name="sendComment" class="button" value="Send Comment"/>
                     </form>
                 </div>
             </div>
@@ -240,10 +240,13 @@
 </script>
 <script type="text/javascript">
     $('body').find('video').mediaelementplayer(
-            {
-                loop: true,
-                success:function(player,node) { player.play(); }
-            });
+        {
+            loop: true,
+            success:function(player,node) {
+                player.load();
+                player.play();
+            }
+        });
 </script>
 </body>
 </html>
