@@ -61,11 +61,6 @@ if ( isset($_GET["ajax"]) ) {
         </div>
     </div>
 </div>
-<footer>
-    <div class="credits">
-      &copy; 2015 Max Crumble Orchestra. All Rights Reserved.
-    </div>
-</footer>
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
 <script src="js/jquery.reveal.js" type="text/javascript"></script>

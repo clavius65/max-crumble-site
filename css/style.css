@@ -1260,7 +1260,7 @@ textarea {
 }
 /* ================= FOOTER ================== */
 footer {
-	background-image:url('../images/pt.png');
+	/*background-image:url('../images/pt.png');*/
 	background-repeat:repeat-x;
 	background-position:left bottom;
 	height:160px;
