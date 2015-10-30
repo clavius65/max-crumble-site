@@ -43,6 +43,47 @@ $(document).ready(function () {
         $(this).parent().attr("id", "current");
         $('#' + $(this).attr('title')).fadeIn();
     });
+
+    mobiletitle();
+});
+
+/////////////////* Title Size */////////////////////////
+
+function mobiletitle() {
+    "use strict";
+    if ($(window).width() < 1024) {
+        $('header .title-regular').hide();
+        $('header .title-small').show();
+    } else {
+        $('header .title-regular').show();
+        $('header .title-small').hide();
+    }
+}
+
+function onWindowResize(callback) {
+    var width = jQuery(window).width(),
+        height = jQuery(window).height();
+
+    jQuery(window).resize(function () {
+        var newWidth = jQuery(window).width(),
+            newHeight = jQuery(window).height();
+
+        if (newWidth !== width || newHeight !== height) {
+            width = newWidth;
+            height = newHeight;
+            callback();
+        }
+    });
+}
+
+onWindowResize(function () {
+    "use strict";
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) === false) {
+        if (window.RT) clearTimeout(window.RT);
+        window.RT = setTimeout(function () {
+            location.reload();
+        }, 200);
+    }
 });
 
 /////////////////* Go to top link */////////////////////////

@@ -28,7 +28,8 @@
 <a id="close" class="menuitem"><span class="info">Close</span></a>
 <!-- HEADER  -->
 <header>
-    <h1>Max Crumble Orchestra</h1>
+    <h1 class="title-regular">Max Crumble Orchestra</h1>
+    <h1 class="title-small">Max Crumble</h1>
 </header>
 <!-- SECTIONS  -->
 <section class="main">
@@ -132,7 +133,7 @@
                         </p>
 
                         <div class="audio-list-player">
-                            <audio src="mp3" preload="none"></audio>
+                            <audio src="mp3" preload="none" width="100%"></audio>
                             <ol class="audio-list">
                                 <li><a href="#" data-src="audio/cocktail-1/America_Cocktail.mp3">America</a><span>Paul Simon</span></li>
                                 <li><a href="#" data-src="audio/cocktail-1/AndyWarhol_Cocktail.mp3">Andy Warhol</a><span>David Bowie</span></li>
@@ -155,7 +156,7 @@
                         <h3>Originals<span class="date">2014-2015</span></h3>
                         <hr/>
                         <div class="audio-list-player">
-                            <audio src="mp3" preload="none"></audio>
+                            <audio src="mp3" preload="none" width="100%"></audio>
                             <ol class="audio-list">
                                 <li><a href="#" data-src="audio/originals/schibadoodle.mp3">Skibadoodle</a><span>John Von Feldt (produced by Robert Roth)</span>
                                 </li>
@@ -183,7 +184,7 @@
                         <hr/>
 
                         <div class="audio-list-player">
-                            <audio src="mp3" preload="none"></audio>
+                            <audio src="mp3" preload="none" width="100%"></audio>
                             <ol class="audio-list">
                                 <li><a href="#" data-src="audio/covers-1/breaking_the_girl_mix2.mp3">Breaking the Girl</a><span>Red Hot Chile Peppers</span></li>
                                 <li><a href="#" data-src="audio/covers-1/mood_indigo.mp3">Mood Indigo</a><span>Duke Ellington</span></li>
@@ -205,7 +206,7 @@
                             honored and privileged to play whatever Fred wants.  Yes, it's rough.  Still awesome Fred, though.
                         </p>
                         <div class="audio-list-player">
-                            <audio src="mp3" preload="none"></audio>
+                            <audio src="mp3" preload="none" width="100%"></audio>
                             <ol class="audio-list">
                                 <li><a href="#" data-src="audio/fred/compadres.mp3">Compadres in the Old Sierra Madre</a><span>The Waybacks</span></li>
                                 <li><a href="#" data-src="audio/fred/hallelujah.mp3">Hallelujah</a><span>Leonard Cohen</span></li>
@@ -223,7 +224,7 @@
                         <h3>Red Barn Recordings<span class="date">September 2010</span></h3>
                         <hr/>
                         <div class="audio-list-player">
-                            <audio src="mp3" preload="none"></audio>
+                            <audio src="mp3" preload="none" width="100%"></audio>
                             <ol class="audio-list">
                                 <li><a href="#" data-src="audio/red-barn/all_my_trials.mp3">All My Trials</a><span>Traditional</span></li>
                                 <li><a href="#" data-src="audio/red-barn/begin_the_beguine.mp3">Begine the Beguine</a><span>Cole Porter</span></li>
@@ -476,7 +477,7 @@
 <script type="text/javascript">
     $('body').find('audio').mediaelementplayer(
             {
-                audioWidth: 380,
+                //audioWidth: 380,
                 success: function (player, node) {
 
                     // Load in a track on click

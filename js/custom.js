@@ -8,6 +8,7 @@ $(document).ready(function () {
     $('#arrows').find('#prev').hide();
     background();
     mobileheader();
+    mobiletitle();
     if ($(window).width() < 480) {
         $('.content').find(".grids").slideUp(100);
     }
@@ -23,6 +24,16 @@ function mobileheader() {
         $('.main').find('#mobile-header-image').show();
     } else {
         $('.main').find('#mobile-header-image').hide();
+    }
+}
+function mobiletitle() {
+    "use strict";
+    if ($(window).width() < 1024) {
+        $('header .title-regular').hide();
+        $('header .title-small').show();
+    } else {
+        $('header .title-regular').show();
+        $('header .title-small').hide();
     }
 }
 
@@ -63,29 +74,28 @@ function clear() {
 /* Menu Icons Effect */
 var menuitem = $(".menuitem");
 menuitem.hover(
+    function (event) {
+        "use strict";
+        var $clickedElement = $(event.target);
+        var $theid = $clickedElement.closest(menuitem);
+        var $allListElements = menuitem.find('.info');
+        $theid.find($allListElements).slideDown(100);
 
-function (event) {
-    "use strict";
-    var $clickedElement = $(event.target);
-    var $theid = $clickedElement.closest(menuitem);
-    var $allListElements = menuitem.find('.info');
-    $theid.find($allListElements).slideDown(100);
+    },
 
-},
-
-function (event) {
-    "use strict";
-    var $clickedElement = $(event.target);
-    var $theid = $clickedElement.closest(menuitem);
-    var $allListElements = menuitem.find('.info');
-    $theid.find($allListElements).slideUp(100);
-});
+    function (event) {
+        "use strict";
+        var $clickedElement = $(event.target);
+        var $theid = $clickedElement.closest(menuitem);
+        var $allListElements = menuitem.find('.info');
+        $theid.find($allListElements).slideUp(100);
+    });
 
 function onWindowResize(callback) {
     var width = jQuery(window).width(),
         height = jQuery(window).height();
 
-    jQuery(window).resize(function() {
+    jQuery(window).resize(function () {
         var newWidth = jQuery(window).width(),
             newHeight = jQuery(window).height();
 
@@ -96,15 +106,14 @@ function onWindowResize(callback) {
         }
     });
 }
-    
-onWindowResize(function() {
+
+onWindowResize(function () {
     "use strict";
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) === false) {
         if (window.RT) clearTimeout(window.RT);
-        window.RT = setTimeout(function()
-                               {
-                                   location.reload();
-                               }, 200);
+        window.RT = setTimeout(function () {
+            location.reload();
+        }, 200);
     }
 });
 
@@ -115,90 +124,90 @@ if ($(window).width() > 480) {
     var curtain = $('#curtain');
     clmn.on("click",
 
-    function (event) {
-        "use strict";
-        curtain.stop().animate({
-            'height': '0%'
-        }, 10);
-        var $clickedElement = $(event.target);
-        var $theid = $clickedElement.closest(clmn);
-        if ($theid.hasClass('active') === false) {
-            $theid.addClass('active');
+        function (event) {
+            "use strict";
+            curtain.stop().animate({
+                'height': '0%'
+            }, 10);
+            var $clickedElement = $(event.target);
+            var $theid = $clickedElement.closest(clmn);
+            if ($theid.hasClass('active') === false) {
+                $theid.addClass('active');
 
-            clmn.each(function () {
-                var e = $(this);
-                if (e.hasClass('active')) {
-                    $(this).stop().fadeOut(1000).delay(500).animate({
-                        'width': '100%'
-                    }, 10).fadeIn(500);
-                } else {
-                    $(this).addClass('animated fadeOutDown').delay(200).stop().fadeOut(1000).animate({
-                        'width': '0%'
-                    }, 10);
-                }
-            });
-            $('.main').find('.active .desc').stop().delay(1000).animate({
-                'marginLeft': '25%'
-            }, 1000).delay(200).animate({
-                'width': '75%',
-                'height': '100%',
-                'padding-top': '80px'
-            }, 1000);
-            homebody.find('#music').stop().animate({
-                'marginRight': '80px'
-            }, 100);
-            homebody.find('#menu').stop().animate({
-                'marginRight': '80px'
-            }, 100);
-            homebody.find('#gallery').stop().animate({
-                'marginRight': '80px'
-            }, 100);
-            homebody.find('#blog').stop().animate({
-                'marginRight': '80px'
-            }, 100);
-            homebody.find('#arrows').fadeOut();
-            homebody.find('#close').fadeIn();
-        }
-    });
+                clmn.each(function () {
+                    var e = $(this);
+                    if (e.hasClass('active')) {
+                        $(this).stop().fadeOut(1000).delay(500).animate({
+                            'width': '100%'
+                        }, 10).fadeIn(500);
+                    } else {
+                        $(this).addClass('animated fadeOutDown').delay(200).stop().fadeOut(1000).animate({
+                            'width': '0%'
+                        }, 10);
+                    }
+                });
+                $('.main').find('.active .desc').stop().delay(1000).animate({
+                    'marginLeft': '25%'
+                }, 1000).delay(200).animate({
+                    'width': '75%',
+                    'height': '100%',
+                    'padding-top': '80px'
+                }, 1000);
+                homebody.find('#music').stop().animate({
+                    'marginRight': '80px'
+                }, 100);
+                homebody.find('#menu').stop().animate({
+                    'marginRight': '80px'
+                }, 100);
+                homebody.find('#gallery').stop().animate({
+                    'marginRight': '80px'
+                }, 100);
+                homebody.find('#blog').stop().animate({
+                    'marginRight': '80px'
+                }, 100);
+                homebody.find('#arrows').fadeOut();
+                homebody.find('#close').fadeIn();
+            }
+        });
 
     homebody.find('#close').on("click",
 
-    function () {
-        "use strict";
-        clmn.removeClass('animated fadeOutDown');
-        curtain.stop().animate({
-            'height': '100%'
-        }, 500);
-        $('.main').find('.active').stop().animate({
-            'width': '25%'
-        }, 1000);
-        clmn.stop().delay(1000).animate({
-            'width': '25%'
-        }, 1000).delay(200).fadeIn("slow");
-        clmn.find('.desc').stop().animate({
-            scrollTop: 0,
-            'height': '125px',
-            'width': '100%',
-            'padding-top': '0px'
-        }, 800).animate({
-            'marginLeft': '0'
-        }, 1000);
-        homebody.find('#close').fadeOut();
-        homebody.find('#menu').stop().animate({
-            'marginRight': '0px'
-        }, 100);
-        homebody.find('#music').stop().animate({
-            'marginRight': '0px'
-        }, 100);
-        homebody.find('#gallery').stop().animate({
-            'marginRight': '0px'
-        }, 100);
-        homebody.find('#blog').stop().animate({
-            'marginRight': '0px'
-        }, 100);
-        homebody.find('#arrows').delay(2000).fadeIn();
-        clmn.removeClass('active');
-    });
+        function () {
+            "use strict";
+            clmn.removeClass('animated fadeOutDown');
+            curtain.stop().animate({
+                'height': '100%'
+            }, 500);
+            $('.main').find('.active').stop().animate({
+                'width': '25%'
+            }, 1000);
+            clmn.stop().delay(1000).animate({
+                'width': '25%'
+            }, 1000).delay(200).fadeIn("slow");
+            clmn.find('.desc').stop().animate({
+                scrollTop: 0,
+                'height': '125px',
+                'width': '100%',
+                'padding-top': '0px'
+            }, 800).animate({
+                'marginLeft': '0'
+            }, 1000);
+            homebody.find('#close').fadeOut();
+            homebody.find('#menu').stop().animate({
+                'marginRight': '0px'
+            }, 100);
+            homebody.find('#music').stop().animate({
+                'marginRight': '0px'
+            }, 100);
+            homebody.find('#gallery').stop().animate({
+                'marginRight': '0px'
+            }, 100);
+            homebody.find('#blog').stop().animate({
+                'marginRight': '0px'
+            }, 100);
+            homebody.find('#arrows').delay(2000).fadeIn();
+            clmn.removeClass('active');
+        });
 
     /* Paging Effects */
     var nextlink = $('#next');
