@@ -27,51 +27,43 @@ CSS3 ANIMATIONS
 /* ================= FONTS ================== */
 @font-face {
 	font-family:'dosisbold';
-	src:url('../fonts/raleway/raleway-light-webfont.eot');
-	src:url('../fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/raleway/raleway-light-webfont.woff') format('woff'),
-		url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype'),
-		url('../fonts/raleway/raleway-light-webfont.svg#dosisbold') format('svg');
+	src:url('../fonts/JosefinSlab/JosefinSlab-Thin.ttf') format('truetype');
 	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
 	font-family:'dosisregular';
-	src:url('../fonts/raleway/raleway-thin-webfont.eot');
-	src:url('../fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/raleway/raleway-thin-webfont.woff') format('woff'),
-		url('../fonts/raleway/raleway-thin-webfont.ttf') format('truetype'),
-		url('../fonts/raleway/raleway-thin-webfont.svg#dosisregular') format('svg');
 	font-weight:normal;
 	font-style:normal;
 }
+
 @font-face {
 	font-family:'ubuntubold';
-	src:url('ubuntu-bold-webfont.eot');
-	src:url('../fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-bold-webfont.woff') format('woff'),
-		url('../fonts/ubuntu-bold-webfont.ttf') format('truetype'),
-		url('../fonts/ubuntu-bold-webfont.svg#ubuntubold') format('svg');
+	src:url('../fonts/raleway/raleway-bold-webfont.eot');
+	src:url('../fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/raleway/raleway-bold-webfont.woff') format('woff'),
+		url('../fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
+		url('../fonts/raleway/raleway-bold-webfont.svg#ubuntubold') format('svg');
 	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
 	font-family:'ubuntuitalic';
-	src:url('../fonts/ubuntu-italic-webfont.eot');
-	src:url('../fonts/ubuntu-italic-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-italic-webfont.woff') format('woff'),
-		url('../fonts/ubuntu-italic-webfont.ttf') format('truetype'),
-		url('../fonts/ubuntu-italic-webfont.svg#ubuntuitalic') format('svg');
+	src:url('../fonts/raleway/raleway-light-webfont.eot');
+	src:url('../fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/raleway/raleway-light-webfont.woff') format('woff'),
+		url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype'),
+		url('../fonts/raleway/raleway-light-webfont.svg#ubuntuitalic') format('svg');
 	font-weight:normal;
 	font-style:italic;
 }
 @font-face {
 	font-family:'ubunturegular';
-	src:url('../fonts/ubuntu-regular-webfont.eot');
-	src:url('../fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ubuntu-regular-webfont.woff') format('woff'),
-		url('../fonts/ubuntu-regular-webfont.ttf') format('truetype'),
-		url('../fonts/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
+	src:url('../fonts/raleway/raleway-regular-webfont.eot');
+	src:url('../fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/raleway/raleway-regular-webfont.woff') format('woff'),
+		url('../fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
+		url('../fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
 	font-weight:normal;
 	font-style: normal;
 }
