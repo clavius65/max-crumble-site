@@ -37,6 +37,20 @@ CSS3 ANIMATIONS
 	font-weight:normal;
 	font-style:normal;
 }
+/*
+@font-face {
+	font-family:'dosisbold';
+	src:url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype');
+	font-weight:bold;
+	font-style:normal;
+}
+@font-face {
+	font-family:'dosisregular';
+	font-weight:normal;
+	font-style:normal;
+}
+*/
+
 /* ----- BODY ----- */
 @font-face {
 	font-family:'ubuntubold';
@@ -257,8 +271,20 @@ header h1 {
 	color:#fff;
 	/*text-transform:uppercase;*/
 	font-size:60px;
-	line-height:80px;
+	/*line-height:80px;*/
 }
+header h1 span {
+	float:right;
+	float: right;
+	font-size: 20px;
+	line-height: 80px;
+	margin-right: 16px;
+	padding-top: 17px;
+	font-weight:normal;
+	/*color: #aaa;*/
+}
+
+
 #mobile-header-image {
 	display:none;
 }
