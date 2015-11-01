@@ -25,6 +25,7 @@ CSS3 ANIMATIONS
 */
 
 /* ================= FONTS ================== */
+/* ----- TITLES ----- */
 @font-face {
 	font-family:'dosisbold';
 	src:url('../fonts/JosefinSlab/JosefinSlab-Regular.ttf') format('truetype');
@@ -36,7 +37,7 @@ CSS3 ANIMATIONS
 	font-weight:normal;
 	font-style:normal;
 }
-
+/* ----- BODY ----- */
 @font-face {
 	font-family:'ubuntubold';
 	src:url('../fonts/raleway/raleway-bold-webfont.eot');
@@ -256,7 +257,7 @@ header h1 {
 	color:#fff;
 	/*text-transform:uppercase;*/
 	font-size:60px;
-	/*line-height:80px;*/
+	line-height:80px;
 }
 #mobile-header-image {
 	display:none;
@@ -1205,13 +1206,13 @@ textarea {
 	padding-bottom:0px;
 	color:#000;
 }
-#tiles ali:nth-child(3n) {
+#tiles a li:nth-child(3n) {
 	height:175px;
 }
-#tiles ali:nth-child(4n-3) {
+#tiles a li:nth-child(4n-3) {
 	padding-bottom:30px;
 }
-#tiles ali:nth-child(5n) {
+#tiles a li:nth-child(5n) {
 	height: 250px;
 }
 /* Filters */
