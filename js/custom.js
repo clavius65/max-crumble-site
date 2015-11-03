@@ -142,7 +142,6 @@ if ($(window).width() > 480) {
             if ($theid.hasClass('active') === false) {
                 $theid.addClass('active');
 
-                //homebody.find('header h2').fadeOut();
                 subtitleHide();
 
                 clmn.each(function () {
