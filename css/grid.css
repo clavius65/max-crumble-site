@@ -39,7 +39,7 @@ Column container
     box-sizing: border-box;
     vertical-align: top;
     letter-spacing: 0; /* And restore our letter spacing. */
-    padding: 15px;
+    padding: 10px;
 }
 .grid-1 {
   width: 6.15%;
@@ -78,6 +78,7 @@ Column container
   width: 97.917%;
   margin: 0;
 }
+
 @media screen and (max-width: 700px) {
   .grids {
     margin: 0;

@@ -1,4 +1,5 @@
 /* Menu Icons Effect */
+/*
 var menuitem = $(".menuitem");
 menuitem.hover(
 
@@ -18,6 +19,7 @@ function (event) {
     var $allListElements = menuitem.find('.info');
     $theid.find($allListElements).slideUp(100);
 });
+*/
 
 /////////////////* COMMENTS */////////////////////////
 

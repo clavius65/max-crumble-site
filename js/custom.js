@@ -5,10 +5,9 @@ var sidemenu = $("nav ul li");
 $(document).ready(function () {
     "use strict";
     section.eq(0).addClass("show");
-    $('#arrows').find('#prev').hide();
     background();
     mobileheader();
-    mobiletitle();
+    subtitle();
     if ($(window).width() < 480) {
         $('.content').find(".grids").slideUp(100);
     }
@@ -26,14 +25,20 @@ function mobileheader() {
         $('.main').find('#mobile-header-image').hide();
     }
 }
-function mobiletitle() {
+function subtitle() {
     "use strict";
-    if ($(window).width() < 1024) {
-        $('header .title-regular').hide();
-        $('header .title-small').show();
+    if ($(window).width() < 650) {
     } else {
-        $('header .title-regular').show();
-        $('header .title-small').hide();
+        $('header h2').removeClass('animated fadeOutDown').css('width','100%').delay(2000).fadeIn(1000);
+    }
+}
+function subtitleHide() {
+    "use strict";
+    if ($(window).width() < 650) {
+    } else {
+        $('header h2').addClass('animated fadeOutDown').stop().delay(100).fadeOut(1000).animate({
+            'width': '0%'
+        }, 10);
     }
 }
 
@@ -46,8 +51,8 @@ function openeffect() {
             var e = $(this);
             e.fadeTo(0, 0);
             setTimeout(function () {
-                e.fadeTo(350, 1);
-            }, i * 350);
+                e.fadeTo(250, 1);
+            }, i * 250);
         });
     }
 }
@@ -72,6 +77,7 @@ function clear() {
 }
 
 /* Menu Icons Effect */
+/*
 var menuitem = $(".menuitem");
 menuitem.hover(
     function (event) {
@@ -90,6 +96,7 @@ menuitem.hover(
         var $allListElements = menuitem.find('.info');
         $theid.find($allListElements).slideUp(100);
     });
+ */
 
 function onWindowResize(callback) {
     var width = jQuery(window).width(),
@@ -131,8 +138,12 @@ if ($(window).width() > 480) {
             }, 10);
             var $clickedElement = $(event.target);
             var $theid = $clickedElement.closest(clmn);
+
             if ($theid.hasClass('active') === false) {
                 $theid.addClass('active');
+
+                //homebody.find('header h2').fadeOut();
+                subtitleHide();
 
                 clmn.each(function () {
                     var e = $(this);
@@ -153,19 +164,7 @@ if ($(window).width() > 480) {
                     'height': '100%',
                     'padding-top': '80px'
                 }, 1000);
-                homebody.find('#music').stop().animate({
-                    'marginRight': '80px'
-                }, 100);
-                homebody.find('#menu').stop().animate({
-                    'marginRight': '80px'
-                }, 100);
-                homebody.find('#gallery').stop().animate({
-                    'marginRight': '80px'
-                }, 100);
-                homebody.find('#blog').stop().animate({
-                    'marginRight': '80px'
-                }, 100);
-                homebody.find('#arrows').fadeOut();
+
                 homebody.find('#close').fadeIn();
             }
         });
@@ -184,6 +183,7 @@ if ($(window).width() > 480) {
             clmn.stop().delay(1000).animate({
                 'width': '25%'
             }, 1000).delay(200).fadeIn("slow");
+
             clmn.find('.desc').stop().animate({
                 scrollTop: 0,
                 'height': '125px',
@@ -205,11 +205,14 @@ if ($(window).width() > 480) {
             homebody.find('#blog').stop().animate({
                 'marginRight': '0px'
             }, 100);
-            homebody.find('#arrows').delay(2000).fadeIn();
+
+            subtitle();
+
             clmn.removeClass('active');
         });
 
     /* Paging Effects */
+    /*
     var nextlink = $('#next');
     var prevlink = $('#prev');
     nextlink.on("click", function () {
@@ -251,6 +254,7 @@ if ($(window).width() > 480) {
         }
 
     });
+    */
 
 }
 if ($(window).width() < 480) {
@@ -282,7 +286,9 @@ $(document).ready(function () {
     });
 });
 
+
 /* Sidebar Menu */
+/*
 sidemenu.on("click", function (event) {
     "use strict";
     var $clickedElement = $(event.target);
@@ -300,6 +306,7 @@ sidemenu.on("click", function (event) {
     }
 
 });
+*/
 
 /////////////////* LOADING ANIMATION ( DON'T REMOVE ! ) */////////////////////////
 

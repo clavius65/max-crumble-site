@@ -1,285 +1,253 @@
-﻿@media only screen and (max-device-width:800px),only screen and (device-width:1024px) and (device-height:600px),only screen and (width:1280px) and (orientation:landscape),only screen and (device-width:800px),only screen and (max-width:767px) {
-	.flex-video {
-		padding-top:0
-	}
-}
-@media only screen and (max-width: 1024px)
-{
-.wrapper
-{
-    margin-top: 120px;
-}
-.single-page-title
-{
-    margin-left:-30px;
-	margin-right:-15px;
-}
-.single-page-title:before,.single-page-title:after 
-{
-    display:none;
-}
-}
-@media only screen and (max-width: 800px)
-{
-header h1
-{
-    font-size:50px;
-}
-#filters li
-{
-    font-size: 14px;
-}
-.page-title
-{
-    font-size:30px;
-    padding-top:15px;
-    margin-bottom:20px;
-}
-.single-page-title
-{
-    font-size:40px;
-}
-h1
-{
-    font-size:40px;
-}
-h2
-{
-    font-size:30px;
-}
-h3
-{
-    font-size:24px;
-}
-h4
-{
-    font-size:22px;
-}
-h5
-{
-    font-size:20px;
-}
-h6
-{
-    font-size:18px;
-}  
-.date
-{
-    font-size: 14px;
-    line-height: 40px;
-}
-.all-button
-{
-    font-size: 14px;
-}
-label
-{
-    padding: 5px;
-    margin-right: 5px;
-}
-input[type="text"], input[type="email"], input[type="number"], input[type="date"], textarea, .button, p, body
-{
-    font-size: 12px;
-}
-.social-icons li img
-{
-    width:34px;
-}
-}
-@media only screen and (max-width:640px) 
-{
-header h1
-{
-    font-size:40px;
-}
-.page-title
-{
-    font-size:20px;
-    padding-top:25px;
-    margin-bottom:30px;
-}
-.single-page-title
-{
-    font-size:30px;
-}
-h1
-{
-    font-size:30px;
-}
-h2
-{
-    font-size:24px;
-}
-h3
-{
-    font-size:20px;
-}
-h4
-{
-    font-size:18px;
-}
-h5
-{
-    font-size:16px;
-}
-h6
-{
-    font-size:14px;
-}  
-.date
-{
-    font-size: 14px;
-    line-height: 34px;
-}
-.all-button
-{
-    font-size: 12px;
-}
-#gallery,#blog
-{
-  display:none;
-}
-#next, #prev
-{
-    top: 40%;
-    padding: 0px 7px 0px 15px;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-}
-#next
-{
-    background-image: url('../images/right-s.png');
-}
-#prev
-{
-    background-image: url('../images/left-s.png');
-}
-#next:hover
-{
-    background-image: url('../images/right2-s.png');
-}
-#prev:hover
-{
-    background-image: url('../images/left2-s.png');
-}
-.post-img
-{
-    margin-bottom:0px;
-}
-}
-@media only screen and (max-height:400px)
-{
-	#next, #prev
-{
-    top: 40%;
-    padding: 0px 7px 0px 15px;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-}
-#next
-{
-    background-image: url('../images/right-s.png');
-}
-#prev
-{
-    background-image: url('../images/left-s.png');
-}
-#next:hover
-{
-    background-image: url('../images/right2-s.png');
-}
-#prev:hover
-{
-    background-image: url('../images/left2-s.png');
-}
-}
-@media only screen and (max-width:480px)
-{
-#music
-{
-  display:none;
-}
-header
-{
-top:80px;
-position:absolute;
-}
-#menu,#homepage {
-position:absolute;
-width:50%;
-}
-#menu .info,#homepage .info{
-width:50%;
-}
-#blog .info,#gallery .info
-{
-	width:25%;
-}
-#blog,#gallery
-{
-	position:absolute;
-	display:block;
-	width:25%;
-}
-#homepage,#blog
-{
-	right:50%;
-}
-#gallery
-{
-	right:75%;
-}
-.main
-{
-top:80px;
-}
-.wrapper
-{
-margin-top:170px;	
-}
-#home
-{
-    overflow:auto !important;
-}
-.main
-{
-    position: relative;
-    margin-top:80px;
-}
-#arrows
-{
-    display:none;
-}
-.column
-{
-    width: 100%;
-}
-.desc
-{
-    height:100%;
-    position:relative;  
-    margin-top:-20px !important;      
+﻿@media only screen and (max-device-width : 800px), only screen and (device-width : 1024px) and (device-height : 600px), only screen and (width : 1280px) and (orientation : landscape), only screen and (device-width : 800px), only screen and (max-width : 767px) {
+    .flex-video {
+        padding-top : 0
+    }
 }
 
-section
-{
-    display:block;
-}
-.page-title
-{
-    font-size:30px;
-    padding-top:25px;
-    margin-bottom:10px;
-}
-.reveal-modal
-{
-    min-width: 0px;
-}
-input:focus, textarea:focus
-{ 
-    pointer-events:none;
+@media only screen and (max-width : 1024px) {
+    header h1 span { font-size : 8px; }
+
+    .wrapper {
+        margin-top : 120px;
+    }
+
+    .single-page-title {
+        margin-left  : -30px;
+        margin-right : -15px;
+    }
+
+    .single-page-title:before, .single-page-title:after {
+        display : none;
+    }
 }
 
+@media only screen and (max-width : 800px) {
+    header h1 { font-size : 50px; }
+    header h1 span { font-size : 8px; }
+
+    #filters li { font-size : 14px; }
+
+    .page-title {
+        font-size     : 30px;
+        padding-top   : 15px;
+        margin-bottom : 20px;
+    }
+
+    .single-page-title { font-size : 40px; }
+
+    h1 { font-size : 40px; }
+    h2 { font-size : 30px; }
+    h3 { font-size : 24px; }
+    h4 { font-size : 22px; }
+    h5 { font-size : 20px; }
+    h6 { font-size : 18px; }
+
+    .date {
+        font-size   : 14px;
+        line-height : 40px;
+    }
+
+    .all-button {
+        font-size : 14px;
+    }
+
+    label {
+        padding      : 5px;
+        margin-right : 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    .button, p, body {
+        font-size : 12px;
+    }
+
+    .social-icons li img {
+        width : 34px;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    header h1 { font-size : 40px; }
+
+    .page-title {
+        font-size     : 20px;
+        padding-top   : 25px;
+        margin-bottom : 30px;
+    }
+
+    .single-page-title {
+        font-size : 30px;
+    }
+
+    h1 { font-size : 30px; }
+    h2 { font-size : 24px; }
+    h3 { font-size : 20px; }
+    h4 { font-size : 18px; }
+    h5 { font-size : 16px; }
+    h6 { font-size : 14px; }
+
+    .date {
+        font-size   : 14px;
+        line-height : 34px;
+    }
+
+    .all-button {
+        font-size : 12px;
+    }
+
+    #gallery, #blog {
+        display : none;
+    }
+
+    .post-img {
+        margin-bottom : 0px;
+    }
+}
+
+@media only screen and (max-height : 400px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    #music {
+        display : none;
+    }
+
+    header {
+        /*top:80px;*/
+        position : absolute;
+    }
+
+    #menu, #homepage {
+        position : absolute;
+        width    : 50%;
+    }
+
+    #menu .info, #homepage .info {
+        width : 50%;
+    }
+
+    #blog .info, #gallery .info {
+        width : 25%;
+    }
+
+    #blog, #gallery {
+        position : absolute;
+        display  : block;
+        width    : 25%;
+    }
+
+    #homepage, #blog {
+        right : 50%;
+    }
+
+    #gallery {
+        right : 75%;
+    }
+
+    .main {
+        /*top:80px;*/
+    }
+
+    .wrapper {
+        margin-top : 170px;
+    }
+
+    #home {
+        overflow : auto !important;
+    }
+
+    .main {
+        position : relative;
+        /*margin-top:80px;*/
+    }
+
+    #arrows {
+        display : none;
+    }
+
+    .column {
+        width : 100%;
+    }
+
+    .desc {
+        height     : 100%;
+        position   : relative;
+        margin-top : -20px !important;
+    }
+
+    section {
+        display : block;
+    }
+
+    .page-title {
+        font-size     : 30px;
+        padding-top   : 25px;
+        margin-bottom : 10px;
+    }
+
+    .reveal-modal {
+        min-width : 0px;
+    }
+
+    input:focus, textarea:focus {
+        pointer-events : none;
+    }
+
+}
+
+/* Titles */
+@media only screen and (min-width : 650px) {
+    header h1.title-regular { display : inline; }
+    header h1.title-small { display : none; }
+    header h2 {
+        font-size:16px;
+        letter-spacing:1px;
+    }
+}
+
+@media only screen and (min-width : 800px) {
+    header h2 {
+        letter-spacing:2px;
+    }
+}
+
+@media only screen and (min-width : 900px) {
+    header h2 {
+        font-size:18px;
+        letter-spacing:1px;
+    }
+}
+
+@media only screen and (min-width : 1000px) {
+    header h2 {
+        font-size:20px;
+        letter-spacing:2px;
+    }
+}
+
+@media only screen and (min-width : 1100px) {
+    header h2 { letter-spacing:5px; }
+}
+
+@media only screen and (min-width : 1200px) {
+    header h2 { letter-spacing:6px; }
+}
+
+@media only screen and (min-width : 1300px) {
+    header h2 { letter-spacing:6.5px; }
+}
+
+@media only screen and (min-width : 1400px) {
+    header h2 { letter-spacing:7px; }
+    /*
+    header h2 {
+        display : inline;
+        font-size : 24px;
+    }
+    */
 }

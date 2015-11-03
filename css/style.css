@@ -27,25 +27,31 @@ CSS3 ANIMATIONS
 /* ================= FONTS ================== */
 /* ----- TITLES ----- */
 @font-face {
-	font-family:'dosisbold';
+	font-family:'titlebold';
 	src:url('../fonts/JosefinSlab/JosefinSlab-Regular.ttf') format('truetype');
 	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
-	font-family:'dosisregular';
+	font-family:'titleregular';
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:'titlelight';
+	src:url('../fonts/JosefinSlab/JosefinSlab-Thin.ttf') format('truetype');
 	font-weight:normal;
 	font-style:normal;
 }
 /*
 @font-face {
-	font-family:'dosisbold';
+	font-family:'titlebold';
 	src:url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype');
 	font-weight:bold;
 	font-style:normal;
 }
 @font-face {
-	font-family:'dosisregular';
+	font-family:'titleregular';
 	font-weight:normal;
 	font-style:normal;
 }
@@ -76,9 +82,19 @@ CSS3 ANIMATIONS
 	font-family:'ubunturegular';
 	src:url('../fonts/raleway/raleway-regular-webfont.eot');
 	src:url('../fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/raleway/raleway-regular-webfont.woff') format('woff'),
-		url('../fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
-		url('../fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
+	url('../fonts/raleway/raleway-regular-webfont.woff') format('woff'),
+	url('../fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
+	url('../fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
+	font-weight:normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:'ubuntuthin';
+	src:url('../fonts/raleway/raleway-thin-webfont.eot');
+	src:url('../fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/raleway/raleway-thin-webfont.woff') format('woff'),
+	url('../fonts/raleway/raleway-thin-webfont.ttf') format('truetype'),
+	url('../fonts/raleway/raleway-thin-webfont.svg#ubunturegular') format('svg');
 	font-weight:normal;
 	font-style: normal;
 }
@@ -118,15 +134,15 @@ body {
 ::-moz-selection {
 	color:#fff;
 	text-shadow:none;
-	background: #204420;
+	/*background: #204420;*/
 }
 ::selection {
 	color:#fff;
 	text-shadow:none;
-	background: #204420;
+	/*background: #204420;*/
 }
 ::-webkit-scrollbar {
-	width:5px;
+	width:10px;
 }
 ::-webkit-scrollbar-thumb {
 	background:#fff;
@@ -135,7 +151,7 @@ body {
 	background:#fff;
 }
 h1,h2,h3,h4,h5,h6 {
-	font-family:'dosisbold';
+	font-family:'titlebold';
 	font-weight:bold;
 	margin-bottom:10px;
 	margin-top:0px;
@@ -162,15 +178,17 @@ h6 {
 	font-size:18px;
 }
 a {
-	color:#fff !important;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	color:#ccc !important;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 	text-decoration:none;
+	font-weight:bold;
 }
 a:hover {
-	color: #204420 !important;
+	/*color: #204420 !important;*/
+	color:#fff !important;
 }
 p {
 	font-family:'ubunturegular';
@@ -180,7 +198,7 @@ p {
 	margin-top:0px !important;
 	word-spacing:0.2em;
 	font-weight:normal;
-	color:#ccc;
+	color:#aaa;
 }
 hr {
 	height:2px;
@@ -221,7 +239,8 @@ blockquote cite {
 	text-align:right;
 }
 blockquote cite:before {
-	content:"\2014 \2009";
+	/*content:"\2014 \2009";*/
+	/*content:"\201C"*/
 }
 strong {
 	font-weight:bold;
@@ -266,22 +285,37 @@ header img {
 }
 header h1 {
 	padding-left:20px;
-	font-family:'dosisbold';
-	font-weight:bold;
+	font-family:'titlebold';
+	/*font-weight:bold;*/
 	color:#fff;
 	/*text-transform:uppercase;*/
 	font-size:60px;
 	/*line-height:80px;*/
+	display:none;
 }
-header h1 span {
-	float:right;
-	float: right;
+header h2 {
 	font-size: 20px;
-	line-height: 80px;
-	margin-right: 16px;
-	padding-top: 17px;
+	line-height: 30px;
+	padding-top: 7px;
+	/*margin-right:100px;*/
+	font-family:'titlelight';
 	font-weight:normal;
-	/*color: #aaa;*/
+	text-transform:uppercase;
+	display:none;
+
+	color:#eee;
+	/*padding-left: 20px;*/
+	position:absolute;
+	top:80px;
+	left:0;
+	opacity:0.85;
+	letter-spacing:7px;
+	background: #173317;
+	width:100%;
+	padding: 5px 0 5px 20px;
+}
+header h1.title-small {
+	display:inline;
 }
 
 
@@ -319,6 +353,9 @@ section {
 	float:left;
 	cursor:pointer;
 }
+.column:hover .page-title {
+	color: #fff;
+}
 
 .desc {
 	width:100%;
@@ -329,6 +366,7 @@ section {
 	bottom:0px;
 	height:125px;
 }
+
 .active .desc {
     -webkit-overflow-scrolling: touch;
 	overflow-x:auto !important;
@@ -340,8 +378,10 @@ section {
 	padding-left:15px;
 	font-size:45px;
 	margin-bottom:15px;
+	color:#ccc;
 	/*text-transform:uppercase;*/
 }
+
 .single-page-title {
 	text-align:center;
 	background-color: #204420;
@@ -351,7 +391,7 @@ section {
 	padding-bottom:10px;
 	margin-bottom:30px;
 	color:#fff;
-	font-family:'dosisbold';
+	font-family:'titlebold';
 	font-weight:bold;
 	margin-left:-47px;
 	margin-right:-32px;
@@ -390,20 +430,20 @@ section {
 	background-position:center center;
 	background-image:url('../images/close.png');
 	background-repeat:no-repeat;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 }
 #close:hover {
 	background-image: url('../images/close2.png');
 }
 /* ================= MENU ================== */
 #close,#music,#menu,#homepage,#gallery,#blog {
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 	z-index:9999999;
 	background-color: #204420;
 	position:fixed;
@@ -426,7 +466,7 @@ section {
 }
 #homepage {
 	top:0;
-	right:80px;
+	right:0;
 	background-position:center center;
 	background-image:url('../images/homepage.png');
 	background-repeat:no-repeat;
@@ -473,16 +513,16 @@ section {
 
 	z-index:9999999;
 	color:#fff;
-	font-family:'dosisregular';
+	font-family:'titleregular';
 	font-weight:normal;
 	line-height:1.5;
 	cursor:pointer;
 	height:80px;
 	width:80px;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 }
 #next {
 	background-position:center center;
@@ -534,17 +574,17 @@ section {
     max-width:200px;
     width:100%;
     opacity:1;
-    -webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 }
 .event-img img:hover {
 	opacity:0.5;
 }
 .event-container h4
 {
-    font-family:'dosisregular';
+    font-family:'titleregular';
 	font-weight:normal;
     font-size: 34px;
     padding-top:20px;
@@ -557,16 +597,16 @@ section {
 
 .event-container h4 span.event-title
 {
-    font-family:'dosisbold';
+    font-family:'titlebold';
 	font-weight:bold;
     font-size:80px;
 }
 .event-container h5
 {
-    -webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 }
 .event-container h5:hover
 {
@@ -682,10 +722,10 @@ nav ul li ul li {
 }
 .flickr-box li img {
 	display:block;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
 	border:5px solid transparent;
 	width: 73px;
 }
@@ -757,10 +797,10 @@ nav ul li ul li {
 	width:60px;
 	height:60px;
 	margin-right:15px;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
 }
 #tab-content li img:hover {
 	border:5px solid #204420;
@@ -820,11 +860,11 @@ nav ul li ul li {
 	margin-right:0px !important;
 }
 .social-icon {
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
-	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
 }
 .social-icon:hover {
 	opacity: 0.5;
@@ -885,7 +925,7 @@ ol.audio-list {
 	outline: none;
 }
 .audio-list li a:hover {
-	color: #fff !important;
+	/*color: #fff !important;*/
 }
 .audio-list li span {
 	float: right;
@@ -907,7 +947,11 @@ li.playing:after {
 {
 	margin-bottom: 20px;
 }
-
+/* ================= SIMPLE PHOTOS GRID ================== */
+.photo-container img
+{
+	padding:5px;
+}
 /* ================= BLOG POSTS ================== */
 .date {
 	float:right;
@@ -921,10 +965,10 @@ li.playing:after {
 	margin:0 0 -5px 0;
 	padding:0;
 	outline:none;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 }
 .post-img img:hover {
 	opacity:0;
@@ -944,6 +988,9 @@ li.playing:after {
 }
 .cover {
 	width:100%;
+}
+.albums .cover {
+	margin-top:80px;
 }
 .cover-info {
 	padding:0px 0px 10px 0px;
@@ -1051,10 +1098,10 @@ ul.pagination li.current a:hover {
 	right:0;
 	padding:7px;
 	background-color:#fff;
-	-webkit-transition:background-color 0.3s ease-in-out;
-	-moz-transition:background-color 0.3s ease-in-out;
-	-o-transition:background-color 0.3s ease-in-out;
-	transition:background-color 0.3s ease-in-out;
+	-webkit-transition:background-color 0.4s ease-in-out;
+	-moz-transition:background-color 0.4s ease-in-out;
+	-o-transition:background-color 0.4s ease-in-out;
+	transition:background-color 0.4s ease-in-out;
 }
 .comments a.reply:hover {
 	color:#fff !important;
@@ -1198,11 +1245,11 @@ textarea {
 #tiles li img {
 	display:block;
 	opacity:1;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
-	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
 	width:195px;
 }
 #tiles li a {
@@ -1258,10 +1305,10 @@ textarea {
 	float:left;
 	padding:8px 20px 8px 20px;
 	cursor:pointer;
-	-webkit-transition:all 0.3s ease-in-out;
-	-moz-transition:all 0.3s ease-in-out;
-	-o-transition:all 0.3s ease-in-out;
-	-ms-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
 	margin:0px 10px 0px 0px;
 }
 #filters li.active {
@@ -1305,11 +1352,11 @@ header h1 {
 	animation: fadeInLeft 1s ease-in-out 1s backwards;
 }
 .page-title {
-	-webkit-animation: fadeInLeft 1s ease-in-out 0.3s backwards;
-	-moz-animation: fadeInLeft 1s ease-in-out 0.3s backwards;
-	-o-animation: fadeInLeft 1s ease-in-out 0.3s backwards;
-	-ms-animation: fadeInLeft 1s ease-in-out 0.3s backwards;
-	animation: fadeInLeft 1s ease-in-out 0.3s backwards;
+	-webkit-animation: fadeInLeft 1s ease-in-out 0.4s backwards;
+	-moz-animation: fadeInLeft 1s ease-in-out 0.4s backwards;
+	-o-animation: fadeInLeft 1s ease-in-out 0.4s backwards;
+	-ms-animation: fadeInLeft 1s ease-in-out 0.4s backwards;
+	animation: fadeInLeft 1s ease-in-out 0.4s backwards;
 }
 .single-page-title {
 	-webkit-animation: bounceInDown 1s ease-in-out 1s backwards;
