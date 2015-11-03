@@ -192,18 +192,6 @@ if ($(window).width() > 480) {
                 'marginLeft': '0'
             }, 1000);
             homebody.find('#close').fadeOut();
-            homebody.find('#menu').stop().animate({
-                'marginRight': '0px'
-            }, 100);
-            homebody.find('#music').stop().animate({
-                'marginRight': '0px'
-            }, 100);
-            homebody.find('#gallery').stop().animate({
-                'marginRight': '0px'
-            }, 100);
-            homebody.find('#blog').stop().animate({
-                'marginRight': '0px'
-            }, 100);
 
             subtitle();
 

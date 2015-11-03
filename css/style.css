@@ -372,12 +372,12 @@ section {
 	overflow-x:auto !important;
 }
 .content {
-	margin:30px 15px 30px 30px;
+	margin:35px 15px 30px 30px;
 }
 .page-title {
 	padding-left:15px;
 	font-size:45px;
-	margin-bottom:15px;
+	margin-bottom:20px;
 	color:#ccc;
 	/*text-transform:uppercase;*/
 }
