@@ -162,7 +162,7 @@ if ($(window).width() > 480) {
                     'padding-top': '80px'
                 }, 1000);
 
-                homebody.find('#close').fadeIn();
+                homebody.find('#close').delay(1000).fadeIn(500);
             }
         });
 
@@ -189,6 +189,7 @@ if ($(window).width() > 480) {
             }, 800).animate({
                 'marginLeft': '0'
             }, 1000);
+
             homebody.find('#close').fadeOut();
 
             subtitle();

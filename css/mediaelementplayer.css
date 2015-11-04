@@ -18,7 +18,8 @@
 }
 
 .mejs-container:focus { 
-	outline: none; 
+	outline: none;
+	border: none;
 }
 
 .me-plugin {
@@ -369,21 +370,21 @@
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-float {
-	position: absolute;
-	display: none;
-	background: #eee;
-	width: 36px;
-	height: 17px;
-	border: solid 1px #333;
-	top: -26px;
-	margin-left: -18px;
-	text-align: center;
-	color: #111;
+	position    : absolute;
+	display     : none;
+	background  : #000;
+	width       : 51px;
+	height      : 17px;
+	border      : solid 1px #333;
+	top         : -26px;
+	margin-left : -18px;
+	text-align  : center;
+	color       : #009c14;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-float-current {
 	margin: 2px;
-	width: 30px;
+	width: 45px;
 	display: block;
 	text-align: center;
 	left: 0;
