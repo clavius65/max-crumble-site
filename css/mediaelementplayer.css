@@ -15,6 +15,7 @@
 	text-align: left;
 	vertical-align: top;
 	text-indent: 0;
+	width: 100% !important;
 }
 
 .mejs-container:focus { 

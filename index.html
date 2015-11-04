@@ -481,9 +481,9 @@
 
                         // Load and play
                         next.addClass('playing').siblings().removeClass('playing');;
-                        nextPlayer.setSrc($('a', next).attr('data-src'));
-                        nextPlayer.load();
-                        nextPlayer.play();
+                            nextPlayer.setSrc($('a', next).attr('data-src'));
+                            nextPlayer.load();
+                            nextPlayer.play();
                     }
                     return false;
                 });
@@ -491,26 +491,12 @@
                 // Load in the first track
                 var first = $(node).parents('.audio-list-player').find('ol li').first();
                 if (first.length) {
+
                     first.addClass('playing');
                     player.setSrc($('a', first).attr('data-src'));
                     player.load();
                 }
             }
-        });
-
-    $('.album').find('.cover').click(function (e) {
-            e.preventDefault();
-
-            $(player).parents('.album').find('.album-title').addClass('audio-list-player-playing');
-
-            $(this).addClass('playing').siblings().removeClass('playing');
-            CurrentPlayer = player;
-
-            player.setSrc($('a', this).attr('data-src'));
-            player.load();
-            player.play();
-
-            return false;
         });
 </script>
 </body>

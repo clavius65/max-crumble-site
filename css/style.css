@@ -265,6 +265,9 @@ label {
 .clear {
 	clear: both;
 }
+:focus {
+	outline:none !important;
+}
 /* ================= HEADER ================== */
 header {
 	height:80px;
