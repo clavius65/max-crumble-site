@@ -916,7 +916,8 @@ nav ul li ul li {
 }
 
 .audio-list-player-playing {
-	outline: #009c14 4px groove;
+	color: #009c14;
+	/*outline: #009c14 4px groove;*/
 }
 
 ol.audio-list {

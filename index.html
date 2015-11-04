@@ -185,7 +185,7 @@
                             <img class="cover" src="audio/originals/cover.jpg" alt=""/>
                         </div>
                         <div class="grid-8">
-                            <h3>Originals<span class="date"></span></h3>
+                            <h3 class="album-title">Originals<span class="date"></span></h3>
                             <hr/>
                             <div class="audio-list-player">
                                 <audio src="mp3" preload="none" width="100%"></audio>
@@ -212,7 +212,7 @@
                             <img class="cover" src="audio/red-barn/cover.jpg" alt=""/>
                         </div>
                         <div class="grid-8">
-                            <h3>Red Barn Recordings<span class="date"></span></h3>
+                            <h3 class="album-title">Red Barn Recordings<span class="date"></span></h3>
                             <hr/>
                             <div class="audio-list-player">
                                 <audio src="mp3" preload="none" width="100%"></audio>
@@ -232,7 +232,7 @@
                             <img class="cover" src="audio/covers-1/cover.jpg" alt=""/>
                         </div>
                         <div class="grid-8">
-                            <h3>Loading Dock<span class="date"></span></h3>
+                            <h3 class="album-title">Loading Dock<span class="date"></span></h3>
                             <hr/>
 
                             <div class="audio-list-player">
@@ -253,7 +253,7 @@
                             <img class="cover" src="audio/cocktail-1/cover.jpg" alt=""/>
                         </div>
                         <div class="grid-8">
-                            <h3>Max Live<span class="date"></span></h3>
+                            <h3 class="album-title">Max Live<span class="date"></span></h3>
                             <hr/>
                             <p>
                                 Live recordings from our recent summer party gig for the Northwest Print People.
@@ -284,7 +284,7 @@
                             <img class="cover" src="audio/fred/cover.jpg" alt=""/>
                         </div>
                         <div class="grid-8">
-                            <h3>Music with Fred<span class="date"></span></h3>
+                            <h3 class="album-title">Music with Fred<span class="date"></span></h3>
                             <hr/>
                             <p>
                                 Impromptu session recordings with our fabulous friend, Fred, whose voice and musicality speaks of truth and beauty. We're
@@ -434,69 +434,84 @@
     var CurrentPlayer = null;
 
     $('body').find('audio').mediaelementplayer(
-            {
-                // Called as each player is loaded
-                success: function (player, node) {
+        {
+            // Called as each player is loaded
+            success: function (player, node) {
 
-                    // Add player to our array
-                    AllPlayers.push(player);
+                // Add player to our array
+                AllPlayers.push(player);
 
-                    // Load in a track on click
-                    $(node).parents('.audio-list-player').find('ol li').click(function (e) {
-                        e.preventDefault();
-                        $(this).addClass('playing').siblings().removeClass('playing');
-                        CurrentPlayer = player;
+                // Load in a track on click
+                $(node).parents('.audio-list-player').find('ol li').click(function (e) {
+                    e.preventDefault();
+                    $(this).addClass('playing').siblings().removeClass('playing');
+                    CurrentPlayer = player;
 
-                        player.setSrc($('a', this).attr('data-src'));
-                        player.load();
-                        player.play();
+                    player.setSrc($('a', this).attr('data-src'));
+                    player.load();
+                    player.play();
 
-                        return false;
-                    });
+                    return false;
+                });
 
-                    // Add styles when playing to make things a bit more obvious in the UI
-                    player.addEventListener('play', function(e) {
-                        $(player).parents('.album').find('.cover').addClass('audio-list-player-playing');
-                        return false;
-                    });
-                    player.addEventListener('pause', function(e) {
-                        $(player).parents('.album').find('.cover').removeClass('audio-list-player-playing');
-                        return false;
-                    });
+                // Add styles when playing to make things a bit more obvious in the UI
+                player.addEventListener('play', function(e) {
+                    $(player).parents('.album').find('.album-title').addClass('audio-list-player-playing');
+                    return false;
+                });
+                player.addEventListener('pause', function(e) {
+                    $(player).parents('.album').find('.album-title').removeClass('audio-list-player-playing');
+                    return false;
+                });
 
-                    // Set up to auto-play the next track
-                    player.addEventListener('ended', function (e) {
-                        var listItem = $(node).parents('.audio-list-player').find('ol li.playing');
-                        if (listItem.length) {
+                // Set up to auto-play the next track
+                player.addEventListener('ended', function (e) {
+                    var listItem = $(node).parents('.audio-list-player').find('ol li.playing');
+                    if (listItem.length) {
 
-                            var next = listItem.next();
-                            var nextPlayer = player;
+                        var next = listItem.next();
+                        var nextPlayer = player;
 
-                            // If no next track, find next player and first list item
-                            if (!next.length) {
-                                var idx = $.inArray(player, AllPlayers);
-                                nextPlayer = (idx+1 < $(AllPlayers).size()) ? AllPlayers[idx+1] : AllPlayers[0];
-                                next = $(nextPlayer).parents('.audio-list-player').find('ol li').first();
-                            }
-
-                            // Load and play
-                            next.addClass('playing').siblings().removeClass('playing');;
-                            nextPlayer.setSrc($('a', next).attr('data-src'));
-                            nextPlayer.load();
-                            nextPlayer.play();
+                        // If no next track, find next player and first list item
+                        if (!next.length) {
+                            var idx = $.inArray(player, AllPlayers);
+                            nextPlayer = (idx+1 < $(AllPlayers).size()) ? AllPlayers[idx+1] : AllPlayers[0];
+                            next = $(nextPlayer).parents('.audio-list-player').find('ol li').first();
                         }
-                        return false;
-                    });
 
-                    // Load in the first track
-                    var first = $(node).parents('.audio-list-player').find('ol li').first();
-                    if (first.length) {
-                        first.addClass('playing');
-                        player.setSrc($('a', first).attr('data-src'));
-                        player.load();
+                        // Load and play
+                        next.addClass('playing').siblings().removeClass('playing');;
+                        nextPlayer.setSrc($('a', next).attr('data-src'));
+                        nextPlayer.load();
+                        nextPlayer.play();
                     }
+                    return false;
+                });
+
+                // Load in the first track
+                var first = $(node).parents('.audio-list-player').find('ol li').first();
+                if (first.length) {
+                    first.addClass('playing');
+                    player.setSrc($('a', first).attr('data-src'));
+                    player.load();
                 }
-            });
+            }
+        });
+
+    $('.album').find('.cover').click(function (e) {
+            e.preventDefault();
+
+            $(player).parents('.album').find('.album-title').addClass('audio-list-player-playing');
+
+            $(this).addClass('playing').siblings().removeClass('playing');
+            CurrentPlayer = player;
+
+            player.setSrc($('a', this).attr('data-src'));
+            player.load();
+            player.play();
+
+            return false;
+        });
 </script>
 </body>
 </html>
