@@ -912,10 +912,15 @@ nav ul li ul li {
 }
 /* ================= AUDIO LIST ================== */
 .audio-list-player {
-
+	padding:10px;
 }
+
+.audio-list-player-playing {
+	outline: #009c14 4px groove;
+}
+
 ol.audio-list {
-	margin: 30px 0 10px 0;
+	margin: 10px 0 10px 0;
 }
 .audio-list li {
 	line-height:1.8em;
@@ -990,7 +995,7 @@ li.playing:after {
 	width:100%;
 }
 .albums .cover {
-	margin-top:80px;
+	margin-top:88px;
 }
 .cover-info {
 	padding:0px 0px 10px 0px;
