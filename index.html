@@ -424,10 +424,16 @@
 <script src="js/custom.js" type="text/javascript"></script>
 <script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+    // Container for all players for track selection logic
+    var AllPlayers = new Array();
+
     $('body').find('audio').mediaelementplayer(
             {
-                //audioWidth: 380,
+                // Called as each player is loaded
                 success: function (player, node) {
+
+                    // Add player to our array
+                    AllPlayers.push(player);
 
                     // Load in a track on click
                     $(node).parents('.audio-list-player').find('ol li').click(function (e) {
@@ -445,19 +451,22 @@
                     player.addEventListener('ended', function (e) {
                         var listItem = $(node).parents('.audio-list-player').find('ol li.playing');
                         if (listItem.length) {
+
                             var next = listItem.next();
+                            var nextPlayer = player;
 
-
-                            // Select first track when we're done to loop forever
+                            // If no next track, find next player and first list item
                             if (!next.length) {
-                                next = listItem.parents('.audio-list-player').find('ol li').first();
+                                var idx = $.inArray(player, AllPlayers);
+                                nextPlayer = (idx+1 < $(AllPlayers).size()) ? AllPlayers[idx+1] : AllPlayers[0];
+                                next = $(nextPlayer).parents('.audio-list-player').find('ol li').first();
                             }
 
-                            next.addClass('playing').siblings().removeClass('playing');
-
-                            player.setSrc($('a', next).attr('data-src'));
-                            player.load();
-                            player.play();
+                            // Load and play
+                            next.addClass('playing').siblings().removeClass('playing');;
+                            nextPlayer.setSrc($('a', next).attr('data-src'));
+                            nextPlayer.load();
+                            nextPlayer.play();
                         }
                     });
 
