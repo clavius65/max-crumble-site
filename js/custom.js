@@ -29,15 +29,21 @@ function subtitle(ms) {
     "use strict";
     if ($(window).width() < 650) {
     } else {
-        $('header h2').delay(ms).fadeIn(2000);
+        $('header h2').stop().delay(ms).fadeIn(2000);
     }
 }
 function subtitleHide() {
     "use strict";
     if ($(window).width() < 650) {
     } else {
-        $('header h2').fadeOut(1000);
+        $('header h2').stop().fadeOut(1000);
     }
+}
+function showMusicPlayer() {
+    $('div.audio-list-player').stop().delay(2000).fadeIn();
+}
+function hideMusicPlayer() {
+    $('div.audio-list-player').fadeOut();
 }
 
 /* Article Opening Effect */
@@ -163,6 +169,11 @@ if ($(window).width() > 480) {
                 }, 1000);
 
                 homebody.find('#close').delay(1000).fadeIn(500);
+
+                // Special handling for music
+                if ($theid.hasClass('albums')) {
+                    showMusicPlayer();
+                }
             }
         });
 
@@ -191,6 +202,7 @@ if ($(window).width() > 480) {
             }, 1000);
 
             homebody.find('#close').fadeOut();
+            hideMusicPlayer();
 
             subtitle();
 
@@ -253,6 +265,15 @@ if ($(window).width() < 480) {
         var $allListElements = $(grds);
         $theid.find($allListElements).slideToggle();
         $(grds).toggleClass('active-grid');
+
+        // Special handling for music
+        if ($theid.parent('article').hasClass('albums')) {
+            if ($(grds).hasClass('active-grid')) {
+                showMusicPlayer();
+            } else {
+                hideMusicPlayer();
+            }
+        }
     });
 }
 /////////////////* TABS */////////////////////////

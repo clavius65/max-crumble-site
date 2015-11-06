@@ -922,12 +922,20 @@ div.album {
 	margin-bottom: 20px;
 	padding-bottom: 40px;
 }
-h3.album-title {
+h3.album-title, h4.album-title {
 	margin: 0;
 }
 
 .audio-list-player {
 	/*padding:10px;*/
+	position: fixed;
+	bottom:0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	/* float: left; */
+	margin: 0;
+    /*display:none;*/
 }
 
 .audio-list-player-playing {
