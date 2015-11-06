@@ -317,13 +317,13 @@
 */
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
 	background: #848484;
-	background: rgba(255,255,255,0.8);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(91, 91, 91, 0.9)), to(rgba(200,200,200,0.8)));
-	background: -webkit-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(200,200,200,0.8));
-	background: -moz-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(200,200,200,0.8));
-	background: -o-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(200,200,200,0.8));
-	background: -ms-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(200,200,200,0.8));
-	background: linear-gradient(rgba(91, 91, 91, 0.9), rgba(200,200,200,0.8));
+	background: rgba(132, 132, 132, 0.8);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(91, 91, 91, 0.9)), to(rgba(132, 132, 132, 0.8)));
+	background: -webkit-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(132, 132, 132, 0.8));
+	background: -moz-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(132, 132, 132, 0.8));
+	background: -o-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(132, 132, 132, 0.8));
+	background: -ms-linear-gradient(top, rgba(91, 91, 91, 0.9), rgba(132, 132, 132, 0.8));
+	background: linear-gradient(rgba(91, 91, 91, 0.9), rgba(132, 132, 132, 0.8));
 	width: 0;
 
 
