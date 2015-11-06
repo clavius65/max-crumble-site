@@ -71,16 +71,26 @@
 }
 
 @media only screen and (max-width : 640px) {
-    header h1 { font-size : 40px; }
+
+    .content {
+        margin: 25px 5px 20px 20px;
+    }
 
     .page-title {
-        font-size     : 20px;
-        padding-top   : 25px;
+        /*font-size     : 20px;*/
+        padding-left: 5px;
+        padding-top: 10px;
+        /*padding-top   : 25px;*/
         margin-bottom : 30px;
     }
 
     .single-page-title {
         font-size : 30px;
+    }
+
+    header h1 {
+        line-height:80px;
+        font-size : 40px;
     }
 
     h1 { font-size : 30px; }
@@ -120,6 +130,7 @@
     header {
         /*top:80px;*/
         position : absolute;
+        /*line-height:80px;*/
     }
 
     #menu, #homepage {
@@ -150,7 +161,7 @@
     }
 
     .main {
-        /*top:80px;*/
+        top:80px;
     }
 
     .wrapper {
@@ -202,6 +213,7 @@
 
 /* Titles */
 @media only screen and (min-width : 650px) {
+
     header h1.title-regular { display : inline; }
     header h1.title-small { display : none; }
     header h2 {

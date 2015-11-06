@@ -39,11 +39,25 @@ function subtitleHide() {
         $('header h2').stop().fadeOut(1000);
     }
 }
+
+var playerVisible = false;
+function toggleMusicPlayer() {
+    "use strict";
+    if (playerVisible) {
+        $('div.audio-list-player').stop().fadeOut();
+        playerVisible = false;
+    } else {
+        $('div.audio-list-player').stop().fadeIn();
+        playerVisible = true;
+    }
+}
 function showMusicPlayer() {
-    $('div.audio-list-player').stop().delay(2000).fadeIn();
+    "use strict";
+    $('div.audio-list-player').show();
 }
 function hideMusicPlayer() {
-    $('div.audio-list-player').fadeOut();
+    "use strict";
+    $('div.audio-list-player').hide();
 }
 
 /* Article Opening Effect */
@@ -263,16 +277,16 @@ if ($(window).width() < 480) {
         var $clickedElement = $(event.target);
         var $theid = $clickedElement.closest(dsc);
         var $allListElements = $(grds);
-        $theid.find($allListElements).slideToggle();
+        var article = $theid.parent('article');
+
+
         $(grds).toggleClass('active-grid');
+        $theid.find($allListElements).slideToggle();
 
         // Special handling for music
-        if ($theid.parent('article').hasClass('albums')) {
-            if ($(grds).hasClass('active-grid')) {
-                showMusicPlayer();
-            } else {
-                hideMusicPlayer();
-            }
+        var article = $theid.parent('article');
+        if (article.hasClass('albums')) {
+            toggleMusicPlayer();
         }
     });
 }
