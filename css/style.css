@@ -371,8 +371,9 @@ section {
 }
 
 .active .desc {
-    -webkit-overflow-scrolling: touch;
-	overflow-x:auto !important;
+	-webkit-overflow-scrolling: touch;
+	overflow-y:scroll !important;
+
 }
 .content {
 	margin:35px 15px 30px 30px;
