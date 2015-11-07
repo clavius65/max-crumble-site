@@ -1,7 +1,7 @@
 /* Opening Animations */
 var homebody = $("#home");
 var section = $("section");
-var sidemenu = $("nav ul li");
+//var sidemenu = $("nav ul li");
 $(document).ready(function () {
     "use strict";
     section.eq(0).addClass("show");
@@ -56,7 +56,7 @@ function toggleMusicPlayer() {
 }
 function showMusicPlayer() {
     "use strict";
-    $('div.audio-list-player').stop().delay(1000).fadeIn();
+    $('div.audio-list-player').stop().delay(1000).fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); });
 }
 function hideMusicPlayer() {
     "use strict";
