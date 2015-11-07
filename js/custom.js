@@ -40,7 +40,10 @@ function subtitleHide() {
     }
 }
 
+/* Music Player */
+
 var playerVisible = false;
+
 function toggleMusicPlayer() {
     "use strict";
     if (playerVisible) {
@@ -53,11 +56,11 @@ function toggleMusicPlayer() {
 }
 function showMusicPlayer() {
     "use strict";
-    $('div.audio-list-player').show();
+    $('div.audio-list-player').stop().delay(1000).fadeIn();
 }
 function hideMusicPlayer() {
     "use strict";
-    $('div.audio-list-player').hide();
+    $('div.audio-list-player').stop().fadeOut();
 }
 
 /* Article Opening Effect */

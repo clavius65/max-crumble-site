@@ -230,8 +230,7 @@
                         </div>
                         <div class="grid-8">
                             <ol class="audio-list">
-                                <li><a href="#" data-src="audio/covers-1/breaking_the_girl_mix2.mp3">Breaking the Girl</a><span>Red Hot Chile Peppers</span>
-                                </li>
+                                <li><a href="#" data-src="audio/covers-1/breaking_the_girl_mix2.mp3">Breaking the Girl</a><span>Red Hot Chile Peppers</span></li>
                                 <li><a href="#" data-src="audio/covers-1/after_life.mp3">Life</a><span>Ludovico Einaudi</span></li>
                                 <li><a href="#" data-src="audio/covers-1/mood_indigo.mp3">Mood Indigo</a><span>Duke Ellington</span></li>
                                 <li><a href="#" data-src="audio/covers-1/schooner_waltz.mp3">Schooner Waltz</a><span>John Kalpus</span></li>
@@ -256,13 +255,10 @@
                                 <li><a href="#" data-src="audio/cocktail-1/AndyWarhol_Cocktail.mp3">Andy Warhol</a><span>David Bowie</span></li>
                                 <li><a href="#" data-src="audio/cocktail-1/BlackPeter_Cocktail.mp3">Black Peter</a><span>Garcia/Hunter</span></li>
                                 <li><a href="#" data-src="audio/cocktail-1/BlueBayou_Cocktail.mp3">Blue Bayou</a><span>Roy Orbison</span></li>
-                                <li><a href="#" data-src="audio/cocktail-1/DustInTheWind_Cocktail.mp3">Dust in the Wind</a><span>Kerry Livgren (Kansas)</span>
-                                </li>
+                                <li><a href="#" data-src="audio/cocktail-1/DustInTheWind_Cocktail.mp3">Dust in the Wind</a><span>Kerry Livgren (Kansas)</span></li>
                                 <li><a href="#" data-src="audio/cocktail-1/FlowerDuet_Cocktail.mp3">Flower Duet</a><span>Delibes</span></li>
-                                <li><a href="#" data-src="audio/cocktail-1/FridayOnMyMind_Cocktail.mp3">Friday On My
-                                    Mind</a><span>Young/Vanda (Easybeats)</span></li>
-                                <li><a href="#" data-src="audio/cocktail-1/ScarboroughFair_Cocktail.mp3">Scarborough
-                                    Fair</a><span>Trad. (arr. Paul Simon)  </span></li>
+                                <li><a href="#" data-src="audio/cocktail-1/FridayOnMyMind_Cocktail.mp3">Friday On My Mind</a><span>Young/Vanda (Easybeats)</span></li>
+                                <li><a href="#" data-src="audio/cocktail-1/ScarboroughFair_Cocktail.mp3">Scarborough Fair</a><span>Trad. (arr. Paul Simon)  </span></li>
                                 <li><a href="#" data-src="audio/cocktail-1/TellMeNow_Cocktail.mp3">Tell Me Now So I Know</a><span>Holly Golightly</span></li>
                             </ol>
                         </div>
@@ -412,15 +408,18 @@
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/jquery.reveal.js" type="text/javascript"></script>
 <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+<!--<script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>-->
 <script src="js/mediaelement-and-player.min.js" type="text/javascript"></script>
 <!--<script src="js/jflickrfeed.min.js" type="text/javascript"></script>-->
 <script src="js/jquery.colorbox-min.js" type="text/javascript"></script>
 <script src="js/custom.js" type="text/javascript"></script>
 <script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+<script src="js/jquery.scrollIntoView.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     var AudioPlayer = null;
     var AllTracks = new Array();
     var CurrentTrack = null;
+
 
     $('body').find('audio').mediaelementplayer(
         {
@@ -475,6 +474,14 @@
                         $(CurrentTrack).parents('.album').find('.album-title').removeClass('audio-list-player-playing');
 
                         var idx = $.inArray(CurrentTrack, AllTracks);
+                        var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
+                        $(nextTrack).trigger('click');
+                        $(nextTrack).parents('.album').scrollIntoView();
+
+
+
+/*
+                        var idx = $.inArray(CurrentTrack, AllTracks);
                         CurrentTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
 
                         $(CurrentTrack).addClass('playing');
@@ -483,6 +490,7 @@
                         AudioPlayer.setSrc($('a', $(CurrentTrack)).attr('data-src'));
                         AudioPlayer.load();
                         AudioPlayer.play();
+*/
                     }
                     return false;
                 });
@@ -495,7 +503,112 @@
                     AudioPlayer.setSrc($('a', $(CurrentTrack)).attr('data-src'));
                     AudioPlayer.load();
                 }
-            }
+            },
+
+            // array of keyboard actions such as play pause
+            keyActions: [
+                {
+                    keys: [
+                        32, // SPACE
+                        179 // GOOGLE play/pause button
+                    ],
+                    action: function(player, media) {
+                        if (media.paused || media.ended) {
+                            media.play();
+                        } else {
+                            media.pause();
+                        }
+                    }
+                },
+                {
+                    keys: [38], // UP
+                    action: function(player, media) {
+
+                        if (CurrentTrack != null) {
+                            var idx = $.inArray(CurrentTrack, AllTracks);
+                            var prevTrack = (idx > 0) ? AllTracks[idx - 1] : AllTracks[$(AllTracks).size() - 1];
+                            $(prevTrack).trigger('click');
+                            $(prevTrack).parents('.album').scrollIntoView();
+                        }
+                    }
+                },
+                {
+                    keys: [40], // DOWN
+                    action: function(player, media) {
+
+                        if (CurrentTrack != null) {
+                            var idx = $.inArray(CurrentTrack, AllTracks);
+                            var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
+                            $(nextTrack).trigger('click');
+                            $(nextTrack).parents('.album').scrollIntoView();
+                        }
+                    }
+                },
+                {
+                    keys: [
+                        37, // LEFT
+                        227 // Google TV rewind
+                    ],
+                    action: function(player, media) {
+                        if (!isNaN(media.duration) && media.duration > 0) {
+                            if (player.isVideo) {
+                                player.showControls();
+                                player.startControlsTimer();
+                            }
+
+                            // 5%
+                            var newTime = Math.max(media.currentTime - player.options.defaultSeekBackwardInterval(media), 0);
+                            media.setCurrentTime(newTime);
+                        }
+                    }
+                },
+                {
+                    keys: [
+                        39, // RIGHT
+                        228 // Google TV forward
+                    ],
+                    action: function(player, media) {
+                        if (!isNaN(media.duration) && media.duration > 0) {
+                            if (player.isVideo) {
+                                player.showControls();
+                                player.startControlsTimer();
+                            }
+
+                            // 5%
+                            var newTime = Math.min(media.currentTime + player.options.defaultSeekForwardInterval(media), media.duration);
+                            media.setCurrentTime(newTime);
+                        }
+                    }
+                },
+                {
+                    keys: [70], // F
+                    action: function(player, media) {
+                        if (typeof player.enterFullScreen != 'undefined') {
+                            if (player.isFullScreen) {
+                                player.exitFullScreen();
+                            } else {
+                                player.enterFullScreen();
+                            }
+                        }
+                    }
+                },
+                {
+                    keys: [77], // M
+                    action: function(player, media) {
+                        player.container.find('.mejs-volume-slider').css('display','block');
+                        if (player.isVideo) {
+                            player.showControls();
+                            player.startControlsTimer();
+                        }
+                        if (player.media.muted) {
+                            player.setMuted(false);
+                        } else {
+                            player.setMuted(true);
+                        }
+                    }
+                }
+            ]
+
         });
 
     // Hide player initially
