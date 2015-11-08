@@ -7,7 +7,7 @@ $(document).ready(function () {
     section.eq(0).addClass("show");
     background();
     mobileheader();
-    subtitle(2000);
+    subtitle(1000);
     if ($(window).width() < 480) {
         $('.content').find(".grids").slideUp(100);
     }
@@ -29,14 +29,14 @@ function subtitle(ms) {
     "use strict";
     if ($(window).width() < 650) {
     } else {
-        $('header h2').stop().delay(ms).fadeIn(2000);
+        $('header h2').stop().delay(ms).fadeIn();
     }
 }
 function subtitleHide() {
     "use strict";
     if ($(window).width() < 650) {
     } else {
-        $('header h2').stop().fadeOut(1000);
+        $('header h2').stop().fadeOut();
     }
 }
 
