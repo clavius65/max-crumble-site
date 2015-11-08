@@ -353,12 +353,9 @@
                 <div class="grids">
                     <div class="grid-6">
                         <h3>Hello!</h3>
-                        <p>We're based in the Greater Puget Sound area in Washington state. Please contact us via email or with the form to the right if you'd like <span class="rw-words rw-words-1">
-                                <span>more information about MCO</span>
-                                <span>for us to play for your event</span>
-                                <span>to comment about our songs</span>
-                                <span>to leave a message </span>
-                            </span>
+                        <p>
+                            We're based in the Greater Puget Sound area in Washington state. If you'd like more information about MCO or would like us to
+                            play for your event please contact us!
                         </p>
                         <p>
                             <label>Location:</label> Seattle, WA
@@ -483,7 +480,12 @@
                         var idx = $.inArray(CurrentTrack, AllTracks);
                         var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
                         $(nextTrack).trigger('click');
-                        $(nextTrack).parents('.album').scrollIntoView();
+
+                        if ($(window).width() > 480) {
+                            $(nextTrack).parents('.album').scrollIntoView();
+                        } else {
+                            $(nextTrack).scrollIntoView();
+                        }
                     }
                     return false;
                 });
@@ -520,7 +522,12 @@
                             var idx = $.inArray(CurrentTrack, AllTracks);
                             var prevTrack = (idx > 0) ? AllTracks[idx - 1] : AllTracks[$(AllTracks).size() - 1];
                             $(prevTrack).trigger('click');
-                            $(prevTrack).parents('.album').scrollIntoView();
+
+                            if ($(window).width() > 480) {
+                                $(prevTrack).parents('.album').scrollIntoView();
+                            } else {
+                                $(prevTrack).scrollIntoView();
+                            }
 
                             $('.audio-list-player').find('button').first().focus();
                         }
@@ -534,7 +541,12 @@
                             var idx = $.inArray(CurrentTrack, AllTracks);
                             var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
                             $(nextTrack).trigger('click');
-                            $(nextTrack).parents('.album').scrollIntoView();
+
+                            if ($(window).width() > 480) {
+                                $(nextTrack).parents('.album').scrollIntoView();
+                            } else {
+                                $(nextTrack).scrollIntoView();
+                            }
 
                             $('.audio-list-player').find('button').first().focus();
 

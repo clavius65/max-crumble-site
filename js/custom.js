@@ -50,7 +50,7 @@ function toggleMusicPlayer() {
         $('div.audio-list-player').stop().fadeOut();
         playerVisible = false;
     } else {
-        $('div.audio-list-player').stop().fadeIn();
+        $('div.audio-list-player').stop().fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); });
         playerVisible = true;
     }
 }
