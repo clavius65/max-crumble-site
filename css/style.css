@@ -152,6 +152,10 @@ body {
     text-shadow: none;
     /*background: #204420;*/
 }
+textarea::selection {
+    /*color: #007d14;*/
+    background: #006914;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -348,10 +352,11 @@ header h2 {
     top: 80px;
     left: 0;
     letter-spacing: 7px;
-    background: #193805;
-    opacity: 0.7;
+    background: rgb(78, 39, 14);
+    /*opacity: 0.7;*/
     width: 100%;
     padding: 5px 0 5px 20px;
+    height:40px;
 
     -webkit-animation: fadeInLeft 1.0s ease-in-out 1s backwards;
     -moz-animation: fadeInLeft 1.0s ease-in-out 1s backwards;
@@ -1658,4 +1663,84 @@ header h1 {
     -o-animation: bounceInDown 1.4s;
     -ms-animation: bounceInDown 1.4s;
     animation: bounceInDown 1.4s;
+}
+
+
+
+
+
+
+
+/* ================= ROTATING WORDS ================== */
+.rw-words{
+    display: inline;
+    text-indent: 10px;
+}
+.rw-words-1 span{
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*color: #009c14;*/
+    /*-webkit-transform-origin: 10% 75%;*/
+    /*transform-origin: 10% 75%;*/
+    -webkit-animation: fadeInOut 20s linear infinite 0s;
+    -ms-animation: fadeInOut 20s linear infinite 0s;
+    animation: fadeInOut 20s linear infinite 0s;
+}
+.rw-words span:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s;
+    /*color: #6b889d;*/
+}
+.rw-words span:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s;
+    /*color: #6b739d;*/
+}
+.rw-words span:nth-child(4) {
+    -webkit-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+    /*color: #7a6b9d;*/
+}
+.rw-words span:nth-child(5) {
+    -webkit-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s;
+    /*color: #8d6b9d;*/
+}
+
+/* ================= ROTATING BAND BYLINE ================== */
+@-webkit-keyframes fadeInOut {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    25% {opacity: 0;}
+}
+
+@-moz-keyframes fadeInOut {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    25% {opacity: 0;}
+}
+
+@-o-keyframes fadeInOut {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    25% {opacity: 0;}
+}
+
+@keyframes fadeInOut {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    25% {opacity: 0;}
+}
+
+.fadeInOut {
+    -webkit-animation-name: fadeInOut;
+    -moz-animation-name: fadeInOut;
+    -o-animation-name: fadeInOut;
+    animation-name: fadeInOut;
 }

@@ -40,9 +40,7 @@ if ( isset($_GET["ajax"]) ) {
   <body>
   <div class="wrapper">
     <div class="wrap">
-      <div class="single-page-title">
-        Thanks!
-      </div>
+      <div class="single-page-title">Thanks!</div>
       <div>
         <div class="grids">
           <div class="grid-12">
