@@ -1090,15 +1090,6 @@ h3.album-title, h4.album-title {
 
 .audio-list-player-playing {
     color: #009c14;
-
-    /*
-    -webkit-animation: greenGlow 2s linear backwards infinite 0s;
-    -moz-animation: greenGlow 2s linear backwards infinite 0s;
-    -o-animation: greenGlow 2s linear backwards infinite 0s;
-    -ms-animation: greenGlow 2s linear backwards infinite 0s;
-    animation: greenGlow 2s linear backwards infinite 0s;
-    */
-
 }
 
 .audio-list-player div.mejs-controls {
@@ -1690,9 +1681,6 @@ header h1 {
     opacity: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*color: #009c14;*/
-    /*-webkit-transform-origin: 10% 75%;*/
-    /*transform-origin: 10% 75%;*/
     -webkit-animation: fadeInOut 25s linear infinite 0s;
     -ms-animation: fadeInOut 25s linear infinite 0s;
     animation: fadeInOut 25s linear infinite 0s;
