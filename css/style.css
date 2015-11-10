@@ -1101,6 +1101,15 @@ h3.album-title, h4.album-title {
 
 }
 
+.audio-list-player div.mejs-controls {
+    -webkit-animation: greenGlow 3s ease-out 2s !important;
+    -moz-animation: greenGlow 3s ease-out 2s !important;
+    -o-animation: greenGlow 3s ease-out 2s !important;
+    -ms-animation: greenGlow 3s ease-out 2s !important;
+    animation: greenGlow 3s ease-out 2s !important;
+}
+
+
 ol.audio-list {
     margin: 10px 0 10px 0;
 }
@@ -1684,58 +1693,54 @@ header h1 {
     /*color: #009c14;*/
     /*-webkit-transform-origin: 10% 75%;*/
     /*transform-origin: 10% 75%;*/
-    -webkit-animation: fadeInOut 20s linear infinite 0s;
-    -ms-animation: fadeInOut 20s linear infinite 0s;
-    animation: fadeInOut 20s linear infinite 0s;
+    -webkit-animation: fadeInOut 25s linear infinite 0s;
+    -ms-animation: fadeInOut 25s linear infinite 0s;
+    animation: fadeInOut 25s linear infinite 0s;
 }
 .rw-words span:nth-child(2) {
-    -webkit-animation-delay: 4s;
-    -ms-animation-delay: 4s;
-    animation-delay: 4s;
-    /*color: #6b889d;*/
+    -webkit-animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    animation-delay: 5s;
 }
 .rw-words span:nth-child(3) {
-    -webkit-animation-delay: 8s;
-    -ms-animation-delay: 8s;
-    animation-delay: 8s;
-    /*color: #6b739d;*/
+    -webkit-animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    animation-delay: 10s;
 }
 .rw-words span:nth-child(4) {
-    -webkit-animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    animation-delay: 12s;
-    /*color: #7a6b9d;*/
+    -webkit-animation-delay: 15s;
+    -ms-animation-delay: 15s;
+    animation-delay: 15s;
 }
 .rw-words span:nth-child(5) {
-    -webkit-animation-delay: 16s;
-    -ms-animation-delay: 16s;
-    animation-delay: 16s;
-    /*color: #8d6b9d;*/
+    -webkit-animation-delay: 20s;
+    -ms-animation-delay: 20s;
+    animation-delay: 20s;
 }
 
-/* ================= ROTATING BAND BYLINE ================== */
+/* ================= TEXT EFFECTS FOR BYLINE ================== */
 @-webkit-keyframes fadeInOut {
     0% {opacity: 0;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
+    8% {opacity: 1;}
+    20% {opacity: 0;}
 }
 
 @-moz-keyframes fadeInOut {
     0% {opacity: 0;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
+    8% {opacity: 1;}
+    20% {opacity: 0;}
 }
 
 @-o-keyframes fadeInOut {
     0% {opacity: 0;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
+    8% {opacity: 1;}
+    20% {opacity: 0;}
 }
 
 @keyframes fadeInOut {
     0% {opacity: 0;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
+    8% {opacity: 1;}
+    20% {opacity: 0;}
 }
 
 .fadeInOut {
@@ -1743,4 +1748,36 @@ header h1 {
     -moz-animation-name: fadeInOut;
     -o-animation-name: fadeInOut;
     animation-name: fadeInOut;
+}
+
+/* ================= TEXT EFFECTS FOR BYLINE ================== */
+@-webkit-keyframes greenGlow {
+    0% {background: inherit;}
+    50% {background: #009c14;}
+    100% {background: inherit;}
+}
+
+@-moz-keyframes greenGlow {
+    0% {background: inherit;}
+    50% {background: #009c14;}
+    100% {background: inherit;}
+}
+
+@-o-keyframes greenGlow {
+    0% {background: inherit;}
+    50% {background: #009c14;}
+    100% {background: inherit;}
+}
+
+@keyframes greenGlow {
+    0% {background: inherit;}
+    50% {background: #009c14;}
+    100% {background: inherit;}
+}
+
+.greenGlow {
+    -webkit-animation-name: greenGlow;
+    -moz-animation-name: greenGlow;
+    -o-animation-name: greenGlow;
+    animation-name: greenGlow;
 }
