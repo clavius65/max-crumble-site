@@ -343,7 +343,6 @@ header h1 {
 header h2 {
     font-size: 20px;
     line-height: 30px;
-    padding-top: 7px;
     font-family: 'titlelight';
     font-weight: normal;
     text-transform: uppercase;
@@ -1062,6 +1061,8 @@ h3.album-title, h4.album-title {
     background: rgba(0, 0, 0, 0.75);
     width: 25%;
     padding: 5px 10px 0 15px;
+    overflow: hidden;
+
     -webkit-animation: fadeInUp 1.4s ease-in-out 1s backwards;
     -moz-animation: fadeInUp 1.4s ease-in-out 1s backwards;
     -o-animation: fadeInUp 1.4s ease-in-out 1s backwards;
@@ -1124,6 +1125,9 @@ ol.audio-list {
 .audio-list li span {
     float: right;
     margin-left: 10px;
+}
+.audio-list li span::after {
+    clear: both;
 }
 
 li.playing a:hover {
@@ -1681,53 +1685,57 @@ header h1 {
     opacity: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-animation: fadeInOut 25s linear infinite 0s;
-    -ms-animation: fadeInOut 25s linear infinite 0s;
-    animation: fadeInOut 25s linear infinite 0s;
+    -webkit-animation: fadeInOut 30s linear infinite 0s;
+    -ms-animation: fadeInOut 30s linear infinite 0s;
+    animation: fadeInOut 30s linear infinite 0s;
 }
 .rw-words span:nth-child(2) {
-    -webkit-animation-delay: 5s;
-    -ms-animation-delay: 5s;
-    animation-delay: 5s;
+    -webkit-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
 }
 .rw-words span:nth-child(3) {
-    -webkit-animation-delay: 10s;
-    -ms-animation-delay: 10s;
-    animation-delay: 10s;
+    -webkit-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
 }
 .rw-words span:nth-child(4) {
-    -webkit-animation-delay: 15s;
-    -ms-animation-delay: 15s;
-    animation-delay: 15s;
+    -webkit-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
 }
 .rw-words span:nth-child(5) {
-    -webkit-animation-delay: 20s;
-    -ms-animation-delay: 20s;
-    animation-delay: 20s;
+    -webkit-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
 }
 
 /* ================= TEXT EFFECTS FOR BYLINE ================== */
 @-webkit-keyframes fadeInOut {
     0% {opacity: 0;}
     8% {opacity: 1;}
+    16% {opacity: 1;}
     20% {opacity: 0;}
 }
 
 @-moz-keyframes fadeInOut {
     0% {opacity: 0;}
     8% {opacity: 1;}
+    16% {opacity: 1;}
     20% {opacity: 0;}
 }
 
 @-o-keyframes fadeInOut {
     0% {opacity: 0;}
     8% {opacity: 1;}
+    16% {opacity: 1;}
     20% {opacity: 0;}
 }
 
 @keyframes fadeInOut {
     0% {opacity: 0;}
     8% {opacity: 1;}
+    16% {opacity: 1;}
     20% {opacity: 0;}
 }
 
