@@ -531,7 +531,6 @@
                         $(node).parents('.audio-list-player').find('h4').html(song);
                         $(node).parents('.audio-list-player').find('h5').html(composer);
 
-
                         $('.audio-list-player').find('button').first().focus();
                         return false;
                     });
@@ -589,13 +588,23 @@
                     return false;
                 });
 
+                // Play default track
+                AudioPlayer.setSrc('audio/default.mp3');
+                AudioPlayer.load();
+                AudioPlayer.play();
+
+                var playerNode = $(node).parents('.audio-list-player');
+                playerNode.find('h4').html('Welcome');
+                playerNode.find('h5').html('Max Crumble Orchestra');
+
+
                 // Load in the first track
-                CurrentTrack = AllTracks[0];
-                if (CurrentTrack != null) {
-                    var firstTrack = AllTracks[0];
-                    $(firstTrack).trigger('click');
-                    AudioPlayer.pause();
-                }
+//                CurrentTrack = AllTracks[0];
+//                if (CurrentTrack != null) {
+//                    var firstTrack = AllTracks[0];
+//                    $(firstTrack).trigger('click');
+//                    AudioPlayer.pause();
+//                }
             },
 
             // array of keyboard actions such as play pause
