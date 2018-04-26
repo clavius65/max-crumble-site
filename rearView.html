@@ -19,7 +19,6 @@
 </head>
 <body>
 <!-- TOP MENU ITEMS  -->
-<a id="menu" class="menuitem" data-reveal-id="menubox"><span class="info">Menu</span></a>
 <a id="homepage" class="menuitem" href="index.html"><span class="info">Home</span></a>
 <!-- HEADER  -->
 <header>
@@ -29,22 +28,18 @@
 <!-- PAGE  -->
 <div class="wrapper">
     <div class="wrap">
-        <div class="single-page-title">
-            Tumbleweed Film Festival
-        </div>
+        <div class="single-page-title">Rear View</div>
         <div class="grids">
-            <div class="flex-video">
-                <iframe src="http://www.youtube.com/embed/jZRNFj2HAEE">
-                </iframe>
+            <div class="grid-12">
+                <div class="video-player">
+                    <video src="rearView.mp4" width="100%" height="100%" preload="auto" autoload controls class="mejs__player">
+                    </video>
+                </div>
             </div>
-            <p>
-                Here's one of Johnny's tunes, Skibadoodle, that was used for a trailer for the <a href="http://www.tumbleweedfilmfest.com/" target="_blank">Tumbleweed Film Festival</a>
-                in 2014.  MCO layed down the basic parts, then Robert Roth (guitar guru and general producer extraordinaire), added all kinds of crazy over-the-top awesomeness and polished
-                up the tracks for the final piece.
-            </p>
         </div>
     </div>
 </div>
+<!-- FOOTER  -->
 <footer>
     <div class="credits">
         &copy; Max Crumble Orchestra. All Rights Reserved. <span><a id="top" href="#">Go to Top &uarr;</a></span>
@@ -63,8 +58,14 @@
     $("body").backstretch("images/photos/concert-bg.jpg");
 </script>
 <script type="text/javascript">
-    // audio size
-    $('body').find('audio').mediaelementplayer({audioWidth: 400});
+    $('body').find('video').mediaelementplayer(
+        {
+            loop: true,
+            success:function(player,node) {
+                player.load();
+                player.play();
+            }
+        });
 </script>
 </body>
 </html>
