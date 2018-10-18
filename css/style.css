@@ -28,7 +28,7 @@ CSS3 ANIMATIONS
 /* ----- TITLES ----- */
 @font-face {
     font-family: 'titlebold';
-    src: url('../fonts/JosefinSlab/JosefinSlab-Regular.ttf') format('truetype');
+    src: url('/fonts/JosefinSlab/JosefinSlab-Regular.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -41,7 +41,7 @@ CSS3 ANIMATIONS
 
 @font-face {
     font-family: 'titlelight';
-    src: url('../fonts/JosefinSlab/JosefinSlab-Thin.ttf') format('truetype');
+    src: url('/fonts/JosefinSlab/JosefinSlab-Thin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -49,7 +49,7 @@ CSS3 ANIMATIONS
 /*
 @font-face {
 	font-family:'titlebold';
-	src:url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype');
+	src:url('/fonts/raleway/raleway-light-webfont.ttf') format('truetype');
 	font-weight:bold;
 	font-style:normal;
 }
@@ -63,44 +63,44 @@ CSS3 ANIMATIONS
 /* ----- BODY ----- */
 @font-face {
     font-family: 'ubuntubold';
-    src: url('../fonts/raleway/raleway-bold-webfont.eot');
-    src: url('../fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/raleway/raleway-bold-webfont.woff') format('woff'),
-    url('../fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
-    url('../fonts/raleway/raleway-bold-webfont.svg#ubuntubold') format('svg');
+    src: url('/fonts/raleway/raleway-bold-webfont.eot');
+    src: url('/fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/raleway/raleway-bold-webfont.woff') format('woff'),
+    url('/fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
+    url('/fonts/raleway/raleway-bold-webfont.svg#ubuntubold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ubuntuitalic';
-    src: url('../fonts/raleway/raleway-light-webfont.eot');
-    src: url('../fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/raleway/raleway-light-webfont.woff') format('woff'),
-    url('../fonts/raleway/raleway-light-webfont.ttf') format('truetype'),
-    url('../fonts/raleway/raleway-light-webfont.svg#ubuntuitalic') format('svg');
+    src: url('/fonts/raleway/raleway-light-webfont.eot');
+    src: url('/fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/raleway/raleway-light-webfont.woff') format('woff'),
+    url('/fonts/raleway/raleway-light-webfont.ttf') format('truetype'),
+    url('/fonts/raleway/raleway-light-webfont.svg#ubuntuitalic') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'ubunturegular';
-    src: url('../fonts/raleway/raleway-regular-webfont.eot');
-    src: url('../fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/raleway/raleway-regular-webfont.woff') format('woff'),
-    url('../fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
-    url('../fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
+    src: url('/fonts/raleway/raleway-regular-webfont.eot');
+    src: url('/fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/raleway/raleway-regular-webfont.woff') format('woff'),
+    url('/fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
+    url('/fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ubuntuthin';
-    src: url('../fonts/raleway/raleway-thin-webfont.eot');
-    src: url('../fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/raleway/raleway-thin-webfont.woff') format('woff'),
-    url('../fonts/raleway/raleway-thin-webfont.ttf') format('truetype'),
-    url('../fonts/raleway/raleway-thin-webfont.svg#ubunturegular') format('svg');
+    src: url('/fonts/raleway/raleway-thin-webfont.eot');
+    src: url('/fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/raleway/raleway-thin-webfont.woff') format('woff'),
+    url('/fonts/raleway/raleway-thin-webfont.ttf') format('truetype'),
+    url('/fonts/raleway/raleway-thin-webfont.svg#ubunturegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -113,7 +113,7 @@ body {
     font-family: 'ubunturegular';
     background-color: #000;
     color: #ccc;
-    background-image: url('../images/bg.png');
+    background-image: url('/images/bg.png');
     background-repeat: repeat;
     background-attachment: fixed;
 }
@@ -125,7 +125,7 @@ body {
     height: 105%;
     background-color: #000;
     z-index: 999999999999999999;
-    background-image: url('../images/loader.gif');
+    background-image: url('images/loader.gif');
     background-repeat: no-repeat;
 }
 
@@ -133,7 +133,7 @@ body {
     width: 100%;
     height: 105%;
     position: fixed;
-    background-image: url('../images/bg.png');
+    background-image: url('/images/bg.png');
     background-repeat: repeat;
 }
 
@@ -231,7 +231,7 @@ p {
 
 hr {
     height: 2px;
-    background: transparent url(../images/line.png) repeat-x bottom left scroll;
+    background: transparent url(/images/line.png) repeat-x bottom left scroll;
     margin: 0px 0px 20px 0px;
     padding: 0px;
     border: none;
@@ -486,7 +486,7 @@ section {
     height: 80px;
     width: 80px;
     background-position: center center;
-    background-image: url('../images/close.png');
+    background-image: url('images/close.png');
     background-repeat: no-repeat;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -495,7 +495,7 @@ section {
 }
 
 #close:hover {
-    background-image: url('../images/close2.png');
+    background-image: url('images/close2.png');
 }
 
 /* ================= MENU ================== */
@@ -520,48 +520,48 @@ section {
     top: 0;
     right: 0;
     background-position: center center;
-    background-image: url('../images/menu.png');
+    background-image: url('images/menu.png');
     background-repeat: no-repeat;
 }
 
 #menu:hover {
-    background-image: url('../images/menu2.png');
+    background-image: url('images/menu2.png');
 }
 
 #homepage {
     top: 0;
     right: 0;
     background-position: center center;
-    background-image: url('../images/homepage.png');
+    background-image: url('images/homepage.png');
     background-repeat: no-repeat;
 }
 
 #homepage:hover {
-    background-image: url('../images/homepage2.png');
+    background-image: url('images/homepage2.png');
 }
 
 #music {
     top: 0;
     right: 80px;
     background-position: center center;
-    background-image: url('../images/music.png');
+    background-image: url('images/music.png');
     background-repeat: no-repeat;
 }
 
 #music:hover {
-    background-image: url('../images/music2.png');
+    background-image: url('images/music2.png');
 }
 
 #gallery {
     top: 0;
     right: 160px;
     background-position: center center;
-    background-image: url('../images/gallery.png');
+    background-image: url('images/gallery.png');
     background-repeat: no-repeat;
 }
 
 #gallery:hover {
-    background-image: url('../images/gallery2.png');
+    background-image: url('images/gallery2.png');
 }
 
 #blog {
@@ -569,12 +569,12 @@ section {
     top: 0;
     right: 80px;
     background-position: center center;
-    background-image: url('../images/blog.png');
+    background-image: url('images/blog.png');
     background-repeat: no-repeat;
 }
 
 #blog:hover {
-    background-image: url('../images/blog2.png');
+    background-image: url('images/blog2.png');
 }
 
 #next, #prev {
@@ -599,23 +599,23 @@ section {
 #next {
     background-position: center center;
     right: 0;
-    background-image: url('../images/right.png');
+    background-image: url('images/right.png');
     background-repeat: no-repeat;
 }
 
 #prev {
     background-position: center center;
     left: 0;
-    background-image: url('../images/left.png');
+    background-image: url('images/left.png');
     background-repeat: no-repeat;
 }
 
 #next:hover {
-    background-image: url('../images/right2.png');
+    background-image: url('images/right2.png');
 }
 
 #prev:hover {
-    background-image: url('../images/left2.png');
+    background-image: url('images/left2.png');
 }
 
 .info {
@@ -712,7 +712,7 @@ section {
     height: 100%;
     position: fixed;
     z-index: 99999999999;
-    background-image: url('../images/bg.png');
+    background-image: url('/images/bg.png');
     background-repeat: repeat;
     overflow-x: auto;
     padding: 0px 30px 0px 30px;
@@ -767,7 +767,7 @@ nav ul li {
     line-height: 2;
     font-size: 14px;
     word-spacing: 0.2em;
-    background: transparent url(../images/line.png) repeat-x bottom left scroll;
+    background: transparent url(/images/line.png) repeat-x bottom left scroll;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -780,7 +780,7 @@ nav ul li:last-child {
 
 nav ul li ul li {
     margin-left: 20px;
-    list-style-image: url('../images/turn.png');
+    list-style-image: url('images/turn.png');
     list-style-position: inside;
     background: none;
     padding-bottom: 0px;
@@ -881,7 +881,7 @@ nav ul li ul li {
 }
 
 #tab-content ul li {
-    background: transparent url(../images/line.png) repeat-x bottom left scroll;
+    background: transparent url(/images/line.png) repeat-x bottom left scroll;
     margin-bottom: 10px;
     padding-bottom: 13px;
     line-height: 2.2;
@@ -1108,14 +1108,21 @@ ol.audio-list {
 
 .audio-list li {
     line-height: 1.8em;
+    padding: 0 5px;
+
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .audio-list li * {
     color: #aaa !important;
     outline: none;
+
 }
 .audio-list li span {
     color: #696969 !important;
+    text-align: right;
 }
 
 .audio-list li a:hover {
@@ -1123,26 +1130,28 @@ ol.audio-list {
 }
 
 .audio-list li span {
-    float: right;
     margin-left: 10px;
 }
-.audio-list li span::after {
-    clear: both;
+
+
+li.playing:before {
+    background: #009c14 !important;
+
+}
+li.playing {
+    background: #009c14;
+    border-radius: 5px;
+}
+li.playing:hover {
+    /*background: rgb(79, 156, 92) !important;*/
+    /*color: rgb(79, 156, 92) !important;*/
 }
 
-li.playing a:hover {
-    color: #009c14 !important;
+li.playing a,
+li.playing span {
+    color: #fff !important;
 }
 
-li.playing * {
-    color: #009c14 !important;
-}
-
-li.playing:after {
-    content: '♬';
-    margin: 5px;
-    color: #009c14;
-}
 
 /* ================= VIDEO PLAYER ================== */
 .video-player {
@@ -1183,12 +1192,12 @@ li.playing:after {
     background-color: #204420;
     margin-bottom: 20px;
     display: block;
-    background-image: url('../images/link.png');
+    background-image: url('images/link.png');
     background-repeat: no-repeat;
 }
 
 .post-img.photo {
-    background-image: url('../images/search.png') !important;
+    background-image: url('images/search.png') !important;
 }
 
 .cover {
@@ -1203,7 +1212,7 @@ li.playing:after {
 }
 
 .cover-info li {
-    background: transparent url(../images/line.png) repeat-x bottom left scroll;
+    background: transparent url(/images/line.png) repeat-x bottom left scroll;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -1301,7 +1310,7 @@ ul.pagination li.current a:hover {
 .reply_icon {
     width: 31px;
     height: 33px;
-    background-image: url(../images/reply.png);
+    background-image: url(/images/reply.png);
     position: absolute;
     display: none;
     top: -45px;
@@ -1504,12 +1513,12 @@ textarea {
 }
 
 #tiles li a.photo {
-    background-image: url('../images/search.png');
+    background-image: url('images/search.png');
     background-repeat: no-repeat;
 }
 
 #tiles li a.iframe {
-    background-image: url('../images/video.png');
+    background-image: url('images/video.png');
     background-repeat: no-repeat;
 }
 
@@ -1585,7 +1594,7 @@ textarea {
 
 /* ================= FOOTER ================== */
 footer {
-    /*background-image:url('../images/pt.png');*/
+    /*background-image:url('images/pt.png');*/
     background-repeat: repeat-x;
     background-position: left bottom;
     height: 160px;

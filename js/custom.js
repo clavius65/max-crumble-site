@@ -82,11 +82,11 @@ function openeffect() {
 function background() {
     "use strict";
     if ($(window).width() > 480) {
-        homebody.backstretch("images/bg.png");
-        $('.main').find(".about").backstretch("images/photos/main_1.jpg");
-        $('.main').find(".albums").backstretch("images/photos/main_2.jpg");
-        $('.main').find(".blog").backstretch("images/photos/main_3.jpg");
-        $('.main').find(".contact").backstretch("images/photos/main_4.jpg");
+        homebody.backstretch("/images/bg.png");
+        $('.main').find(".about").backstretch("/images/photos/main_1.jpg");
+        $('.main').find(".albums").backstretch("/images/photos/main_2.jpg");
+        $('.main').find(".blog").backstretch("/images/photos/main_3.jpg");
+        $('.main').find(".contact").backstretch("/images/photos/main_4.jpg");
     }
 }
 

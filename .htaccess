@@ -1,0 +1,25 @@
+# AddType application/x-httpd-php         .php
+AddType application/x-httpd-php-source  .phps
+
+AddType video/ogg 	.ogv
+AddType video/mp4 	.mp4
+AddType video/mp4       .m4v
+AddType video/webm 	.webm
+
+
+#LoadModule php5_module        modules/mod_php55.so
+
+
+
+#AddHandler application/x-httpd-php .php
+
+#Options +ExecCGI +FollowSymLinks
+
+# ADL added rewrite rules for dynamic URI routes
+Options -Multiviews
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
