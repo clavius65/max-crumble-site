@@ -56,11 +56,12 @@ function toggleMusicPlayer() {
 }
 function showMusicPlayer() {
     "use strict";
-    $('div.audio-list-player').stop().delay(1000).fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); });
+    $('div.audio-list-player').stop().delay(1000).fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); $('#albumSort').fadeIn(); });
 }
 function hideMusicPlayer() {
     "use strict";
     $('div.audio-list-player').stop().fadeOut();
+    $('#albumSort').fadeOut();
 }
 
 /* Article Opening Effect */

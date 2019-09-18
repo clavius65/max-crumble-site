@@ -312,7 +312,7 @@ label {
 /* ================= HEADER ================== */
 header {
     height: 80px;
-    width: 100%;
+    width: calc(100% - 10px);
     position: fixed;
     top: 0;
     left: 0;
@@ -477,7 +477,7 @@ section {
 #close {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 10px;
     display: none;
     color: #fff;
     z-index: 9999999;
@@ -1104,15 +1104,19 @@ h3.album-title, h4.album-title {
 
 ol.audio-list {
     margin: 10px 0 10px 0;
+    /*margin: 10px 0 10px 0;*/
 }
 
 .audio-list li {
     line-height: 1.8em;
     padding: 0 5px;
+}
 
-    display: flex;
-    justify-content: space-between;
-
+@media screen and (max-width: 700px) {
+    .audio-list li {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .audio-list li * {
@@ -1122,15 +1126,23 @@ ol.audio-list {
 }
 .audio-list li span {
     color: #696969 !important;
-    text-align: right;
 }
 
 .audio-list li a:hover {
     color: #fff !important;
 }
+/*.audio-list li.playing span {*/
+    /*color: #fff !important;*/
+/*}*/
+
 
 .audio-list li span {
+    float: right;
     margin-left: 10px;
+    text-align: right;
+}
+.audio-list li span::after {
+    clear: both;
 }
 
 
@@ -1152,7 +1164,51 @@ li.playing span {
     color: #fff !important;
 }
 
+/*li.playing:after {*/
+    /*content: '♬';*/
+    /*margin: 5px;*/
+    /*color: #fff;*/
+/*}*/
 
+/*li.playing a:hover {*/
+    /*color: #009c14 !important;*/
+/*}*/
+
+/*li.playing * {*/
+    /*color: #009c14 !important;*/
+/*}*/
+
+/*li.playing:after {*/
+    /*content: '♬';*/
+    /*margin: 5px;*/
+    /*color: #009c14;*/
+/*}*/
+
+#albumSort {
+    float: right;
+    display: none;
+    /*margin-left: 25px;*/
+
+    color: #fff;
+    z-index: 9999999;
+    cursor: pointer;
+    background-color: #204420;
+    height: 40px;
+    width: 40px;
+    background-position: center center;
+    background-image: url('images/ham.png');
+    background-repeat: no-repeat;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+}
+#albumSort:hover {
+    background-color: #fff;
+    background-image: url('images/ham2.png');
+
+}
 /* ================= VIDEO PLAYER ================== */
 .video-player {
     margin-bottom: 20px;
