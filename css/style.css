@@ -1184,10 +1184,9 @@ li.playing span {
     /*color: #009c14;*/
 /*}*/
 
-#albumSort {
+.sort-icon {
     float: right;
     display: none;
-    /*margin-left: 25px;*/
 
     color: #fff;
     z-index: 9999999;
@@ -1196,19 +1195,55 @@ li.playing span {
     height: 40px;
     width: 40px;
     background-position: center center;
-    background-image: url('images/ham.png');
     background-repeat: no-repeat;
 
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+.sort-icon:hover {
+    background-color: #fff !important;
+}
+.sort-icon.active {
+    background-color: #009c14;
+}
+
+#albumSort {
+    background-image: url('images/ham.png');
 }
 #albumSort:hover {
-    background-color: #fff;
     background-image: url('images/ham2.png');
-
 }
+
+.sort-choice[data-sort='nameA'] {
+    background-image: url('images/sortAlpha.png');
+}
+.sort-choice[data-sort='nameA']:hover{
+    background-image: url('images/sortAlpha2.png');
+}
+
+.sort-choice[data-sort='nameZ'] {
+    background-image: url('images/sortAlphaRev.png');
+}
+.sort-choice[data-sort='nameZ']:hover{
+    background-image: url('images/sortAlphaRev2.png');
+}
+
+.sort-choice[data-sort='newest'] {
+    background-image: url('images/sortTime.png');
+}
+.sort-choice[data-sort='newest']:hover {
+    background-image: url('images/sortTime2.png');
+}
+
+.sort-choice[data-sort='oldest'] {
+    background-image: url('images/sortTimeRev.png');
+}
+.sort-choice[data-sort='oldest']:hover {
+    background-image: url('images/sortTimeRev2.png');
+}
+
 /* ================= VIDEO PLAYER ================== */
 .video-player {
     margin-bottom: 20px;
