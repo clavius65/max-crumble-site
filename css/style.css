@@ -158,15 +158,25 @@ textarea::selection {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 14px;
 }
 
 ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
     background: #fff;
 }
-
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: #fff;
+    background: #333;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-track:hover {
+    background: #222;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -312,7 +322,7 @@ label {
 /* ================= HEADER ================== */
 header {
     height: 80px;
-    width: calc(100% - 10px);
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -477,7 +487,7 @@ section {
 #close {
     position: fixed;
     top: 0;
-    right: 10px;
+    right: 0;
     display: none;
     color: #fff;
     z-index: 9999999;
@@ -1052,7 +1062,7 @@ h3.album-title, h4.album-title {
     bottom: 0;
     left: 0;
     z-index: 999;
-    width: 100%;
+    width: calc(100% - 14px);
     margin: 0;
     height: 130px;
 }
@@ -1205,7 +1215,7 @@ li.playing span {
 .sort-icon:hover {
     background-color: #fff !important;
 }
-.sort-icon.active {
+.sort-active {
     background-color: #009c14;
 }
 

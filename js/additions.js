@@ -202,23 +202,11 @@ function wirePanels(startMusic) {
     });
 
     $('.column.albums').click(function(event) {
+        showMusicPlayer();
         //history.pushState(null, null, "/music");
     });
 
-    $("#albumSort").click(function(e) {
-
-        if ($(this).hasClass("active")) {
-            $(".sort-choice").hide();
-            $(this).removeClass("active");
-        } else {
-            $(".sort-choice").show(100);
-            $(this).addClass("active");
-        }
-
-        //$(".sort-choice").toggle();
-        //$(this).toggleClass("active");
-        return false;
-    });
+    $("#albumSort").click(toggleSortChoices);
 
     $(".sort-choice").click(function(e) {
         var sort = $(this).data("sort");
@@ -318,12 +306,27 @@ function onClickClose(e) {
     history.pushState(url, "", url);
 }
 
+function toggleSortChoices(e) {
+
+    var btn = $(e.target);
+
+    if ($(btn).hasClass("sort-active")) {
+        $(".sort-choice").hide();
+        $(btn).removeClass("sort-active");
+    } else {
+        $(".sort-choice").show(100);
+        $(btn).addClass("sort-active");
+    }
+
+    return false;
+}
+
 function albumSort(mode) {
     var wrapper = $('.albums .grids');
     var footer = $(wrapper).find('footer');
 
-    $(".sort-choice").removeClass("active");
-    $(".sort-choice[data-sort=" + mode + "]").addClass("active");
+    $(".sort-choice").removeClass("sort-active");
+    $(".sort-choice[data-sort=" + mode + "]").addClass("sort-active");
 
     switch (sortMode = mode) {
         case "newest":

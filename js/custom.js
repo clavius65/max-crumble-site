@@ -50,18 +50,24 @@ function toggleMusicPlayer() {
         $('div.audio-list-player').stop().fadeOut();
         playerVisible = false;
     } else {
-        $('div.audio-list-player').stop().fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); });
+        $('div.audio-list-player').stop().fadeIn(200, function() {
+            $('.audio-list-player').find('button').first().focus();
+        });
         playerVisible = true;
     }
 }
 function showMusicPlayer() {
     "use strict";
-    $('div.audio-list-player').stop().delay(1000).fadeIn(200, function() { $('.audio-list-player').find('button').first().focus(); $('#albumSort').fadeIn(); });
+    $('div.audio-list-player').stop().delay(1000).fadeIn(200, function() {
+        $('.audio-list-player').find('button').first().focus();
+        $('#albumSort').fadeIn();
+    });
 }
 function hideMusicPlayer() {
     "use strict";
     $('div.audio-list-player').stop().fadeOut();
-    $('#albumSort').fadeOut();
+    $(".sort-choice").hide();
+    $('#albumSort').removeClass("sort-active").hide();
 }
 
 /* Article Opening Effect */
@@ -186,12 +192,17 @@ if ($(window).width() > 480) {
                     'padding-top': '80px'
                 }, 1000);
 
+                // Make room for scrollbar
+                $("header").css("width", "calc(100% - 14px)");
+                $("#close").css("right", "14px");
+
                 homebody.find('#close').delay(1000).fadeIn(500);
 
+
                 // Special handling for music
-                if ($theid.hasClass('albums')) {
-                    showMusicPlayer();
-                }
+                //if ($theid.hasClass('albums')) {
+                //    showMusicPlayer();
+                //}
             }
         });
 
@@ -220,6 +231,11 @@ if ($(window).width() > 480) {
             }, 1000);
 
             homebody.find('#close').fadeOut();
+
+            // Restore space taken up by scrollbar
+            $("#close").css("right", "0");
+            $("header").css("width", "100%");
+
             hideMusicPlayer();
 
             subtitle();
