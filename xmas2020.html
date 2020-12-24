@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Max Crumble Orchestra</title>
+    <!-- META TAGS  -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- CSS FILES  -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/grid.css" rel="stylesheet" type="text/css"/>
+    <link href="css/media.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/mediaelementplayer.css?v=2018-10-18" rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- TOP MENU ITEMS  -->
+<a id="homepage" class="menuitem" href="/index.html"><span class="info">Home</span></a>
+<!-- HEADER  -->
+<header>
+    <h1 class="title-regular">Max Crumble Orchestra</h1>
+    <h1 class="title-small">Max Crumble</h1>
+</header>
+<!-- PAGE  -->
+<div class="wrapper">
+    <div class="wrap">
+        <div class="single-page-title">Merry Christmas!</div>
+        <div class="grids">
+
+            <!-- Xmas 2020 -->
+            <div class="album" data-title="xmas" data-date="2020.3">
+                <div class="grid-12">
+                    <h3 class="album-title">Holiday Tunes<span class="date">2020</span></h3>
+                </div>
+                <div class="grid-4">
+                    <img class="cover" src="/audio/xmas-2020/cover.jpg" alt=""/>
+                </div>
+                <div class="grid-8">
+                    <p>Lush syrupy goodness to wrap up a crazy year</p>
+                    <ol class="audio-list">
+                        <li class="audio-track" data-track= "chestnuts"><a href="/audio/xmas-2020/chestnuts.m4a">The Christmas Song (Chestnuts...)</a><span>Torme/Wells</span></li>
+                        <li class="audio-track" data-track= "coventry"><a href="/audio/xmas-2020/coventry.mp3">Coventry Carol</a><span>trad.</span></li>
+                        <li class="audio-track" data-track= "gentlemen"><a href="/audio/xmas-2020/gentlemen.m4a">God Resist Ye</a><span>trad.</span></li>
+                        <li class="audio-track" data-track= "happy"><a href="/audio/xmas-2020/happythang.m4a">Happy Thang</a><span>Laird</span></li>
+                        <li class="audio-track" data-track= "greensleeves"><a href="/audio/xmas-2020/greensleeves.m4a">Greensleeves</a><span>trad.</span></li>
+                        <li class="audio-track" data-track= "holy"><a href="/audio/xmas-2020/holynight.m4a">Oh Holy Night</a><span>trad.</span></li>
+                        <li class="audio-track" data-track= "cookie"><a href="/audio/xmas-2020/sugarcookie.m4a">Sugar Cookie</a><span>Von Feldt</span></li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- FOOTER  -->
+<footer>
+    <div class="credits">
+        &copy; Max Crumble Orchestra. All Rights Reserved. <span><a id="top" href="#">Go to Top &uarr;</a></span>
+    </div>
+</footer>
+
+<div class="audio-list-player">
+    <div class="audio-list-metadata">
+        <h4>Song</h4>
+        <h5>Composer</h5>
+    </div>
+    <audio src="/mp3" preload="none" width="100%" height="100%"></audio>
+</div>
+
+<!-- JS FILES  -->
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery.reveal.js" type="text/javascript"></script>
+<script src="/js/jquery.backstretch.min.js" type="text/javascript"></script>
+
+<script src="/js/mediaelement-and-player.min.js?v=2018-10-18" type="text/javascript"></script>
+<!--<script src="/js/mediaelement-and-player.js?v=2018-10-18" type="text/javascript"></script>-->
+<!--<script src="/js/jflickrfeed.min.js" type="text/javascript"></script>-->
+
+<script src="/js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script src="/js/jquery.placeholder.min.js" type="text/javascript"></script>
+<script src="/js/jquery.scrollIntoView.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+<script src="/js/additions.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $("body").backstretch("images/photos/concert-bg.jpg");
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        showMusicPlayer();
+
+        var firstTrack = AllTracks[0];
+        $(firstTrack).click();
+
+    });
+
+
+    //$('body').find('video').mediaelementplayer(
+    //    {
+    //        loop: true,
+    //        success:function(player,node) {
+    //            player.load();
+    //            player.play();
+    //        }
+    //    });
+</script>
+</body>
+</html>

@@ -374,7 +374,6 @@ function onClickTrack(e) {
     if (CurrentTrack != null) {
         $(CurrentTrack).removeClass('playing');
         $(CurrentTrack).parents('.album').find('.album-title').removeClass('audio-list-player-playing');
-        //pushCurrentTrackState(true);
     }
 
     $(this).addClass('playing');
@@ -410,9 +409,13 @@ function pushCurrentTrackState(includeState) {
     if ((CurrentTrack === null) || (CurrentTrack === undefined))
         return;
 
+    var root = $(CurrentTrack).parents('.albums').data("group");
+    if ((root === null) || (root === undefined))
+        return;
+
     var albumName = $(CurrentTrack).parents('.album').data("title");
     var trackName = $(CurrentTrack).data("track");
-    var url = "/music/" + albumName + "/" + trackName;
+    var url = root + "/" + albumName + "/" + trackName;
     var state = (includeState === true) ? url : null;
     history.pushState(state, null, url);
 
