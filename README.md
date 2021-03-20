@@ -1,8 +1,8 @@
 
-##Introduction
+## Introduction
 Files and scripts for [Max Crumble Orchestra](http://maxcrumble.com/) web site.
 
-##Tips
+## Tips
 To run PHP locally along with a built-in web server (for dev)
 ```bash
 php -S localhost:8000 -n -t .
