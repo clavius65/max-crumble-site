@@ -27,80 +27,52 @@ CSS3 ANIMATIONS
 /* ================= FONTS ================== */
 /* ----- TITLES ----- */
 @font-face {
+    src: url('/fonts/mostra-nuova-light.otf');
     font-family: 'titlebold';
-    src: url('/fonts/JosefinSlab/JosefinSlab-Regular.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
+    src: url('/fonts/mostra-nuova-light.otf');
     font-family: 'titleregular';
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
+    src: url('/fonts/mostra-nuova-light.otf');
     font-family: 'titlelight';
-    src: url('/fonts/JosefinSlab/JosefinSlab-Thin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*
-@font-face {
-	font-family:'titlebold';
-	src:url('/fonts/raleway/raleway-light-webfont.ttf') format('truetype');
-	font-weight:bold;
-	font-style:normal;
-}
-@font-face {
-	font-family:'titleregular';
 	font-weight:normal;
 	font-style:normal;
 }
-*/
+
 
 /* ----- BODY ----- */
 @font-face {
-    font-family: 'ubuntubold';
-    src: url('/fonts/raleway/raleway-bold-webfont.eot');
-    src: url('/fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/raleway/raleway-bold-webfont.woff') format('woff'),
-    url('/fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
-    url('/fonts/raleway/raleway-bold-webfont.svg#ubuntubold') format('svg');
+    src: url('/fonts/ubuntu-regular-webfont.ttf');
+    font-family: 'mcobold';
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntuitalic';
-    src: url('/fonts/raleway/raleway-light-webfont.eot');
-    src: url('/fonts/raleway/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/raleway/raleway-light-webfont.woff') format('woff'),
-    url('/fonts/raleway/raleway-light-webfont.ttf') format('truetype'),
-    url('/fonts/raleway/raleway-light-webfont.svg#ubuntuitalic') format('svg');
+    src: url('/fonts/ubuntu-regular-webfont.ttf');
+    font-family: 'mcoitalic';
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'ubunturegular';
-    src: url('/fonts/raleway/raleway-regular-webfont.eot');
-    src: url('/fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/raleway/raleway-regular-webfont.woff') format('woff'),
-    url('/fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
-    url('/fonts/raleway/raleway-regular-webfont.svg#ubunturegular') format('svg');
+    src: url('/fonts/ubuntu-regular-webfont.ttf');
+    font-family: 'mcoregular';
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntuthin';
-    src: url('/fonts/raleway/raleway-thin-webfont.eot');
-    src: url('/fonts/raleway/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/raleway/raleway-thin-webfont.woff') format('woff'),
-    url('/fonts/raleway/raleway-thin-webfont.ttf') format('truetype'),
-    url('/fonts/raleway/raleway-thin-webfont.svg#ubunturegular') format('svg');
+    src: url('/fonts/ubuntu-regular-webfont.ttf');
+    font-family: 'mcothin';
     font-weight: normal;
     font-style: normal;
 }
@@ -109,8 +81,8 @@ CSS3 ANIMATIONS
 body {
     margin: 0px;
     padding: 0px;
-    font-size: 14px;
-    font-family: 'ubunturegular';
+    font-size: 16px;
+    font-family: 'mcoregular';
     background-color: #000;
     color: #ccc;
     background-image: url('/images/bg.png');
@@ -229,7 +201,7 @@ a:hover {
 }
 
 p {
-    font-family: 'ubunturegular';
+    /*font-family: 'mcoregular';*/
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 20px !important;
@@ -250,7 +222,7 @@ hr {
 }
 
 blockquote {
-    font-family: 'ubuntuitalic';
+    font-family: 'mcoitalic';
     font-style: italic;
     font-size: 14px;
     line-height: 1.5;
@@ -272,7 +244,7 @@ blockquote:before {
 }
 
 blockquote cite {
-    font-family: 'ubunturegular';
+    font-family: 'mcoregular';
     font-size: 14px;
     line-height: 1.5;
     display: block;
@@ -288,11 +260,11 @@ blockquote cite:before {
 
 strong {
     font-weight: bold;
-    font-family: 'ubuntubold';
+    font-family: 'mcobold';
 }
 
 i {
-    font-family: 'ubuntuitalic';
+    font-family: 'mcoitalic';
     font-style: italic;
 }
 
@@ -361,7 +333,8 @@ header h2 {
     top: 80px;
     left: 0;
     letter-spacing: 7px;
-    background: rgb(78, 39, 14);
+    /*background: rgb(78, 39, 14);*/
+    background: rgb(170 0 213 / 85%);
     /*opacity: 0.7;*/
     width: 100%;
     padding: 5px 0 5px 20px;
@@ -1095,7 +1068,7 @@ h3.album-title, h4.album-title {
 
 .audio-list-player h5 {
     font-size: 14px;
-    font-family:'ubunturegular';
+    font-family:'mcoregular';
     color: #696969;
 }
 
