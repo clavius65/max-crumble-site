@@ -8,6 +8,8 @@ $(document).ready(function () {
     background();
     mobileheader();
     subtitle(1000);
+    versionResources("2021-12-13")
+
     if ($(window).width() < 480) {
         $('.content').find(".grids").slideUp(100);
     }
@@ -38,6 +40,9 @@ function subtitleHide() {
     } else {
         $('header h2').stop().fadeOut();
     }
+}
+function versionResources(version) {
+    $(".album > a,img").attr("v", version)
 }
 
 /* Music Player */
@@ -90,10 +95,10 @@ function background() {
     "use strict";
     if ($(window).width() > 480) {
         homebody.backstretch("/images/bg.png");
-        $('.main').find(".about").backstretch("/images/photos/main_1.jpg");
-        $('.main').find(".albums").backstretch("/images/photos/main_2.jpg");
-        $('.main').find(".blog").backstretch("/images/photos/main_3.jpg");
-        $('.main').find(".contact").backstretch("/images/photos/main_4.jpg");
+        $('.main').find(".about").backstretch("/images/photos/main_1.jpg?v=2021-11-30-1");
+        $('.main').find(".albums").backstretch("/images/photos/main_2.jpg?v=2021-11-30-1");
+        $('.main').find(".blog").backstretch("/images/photos/main_3.jpg?v=2021-11-30-1");
+        $('.main').find(".contact").backstretch("/images/photos/main_4.jpg?v=2021-11-30-1");
     }
 }
 
@@ -175,22 +180,22 @@ if ($(window).width() > 480) {
                 clmn.each(function () {
                     var e = $(this);
                     if (e.hasClass('active')) {
-                        $(this).stop().fadeOut(1000).delay(500).animate({
+                        $(this).stop().fadeOut(500).delay(500).animate({
                             'width': '100%'
                         }, 10).fadeIn(500);
                     } else {
-                        $(this).addClass('animated fadeOutDown').delay(200).stop().fadeOut(1000).animate({
+                        $(this).addClass('animated fadeOutDown').delay(200).stop().fadeOut(500).animate({
                             'width': '0%'
                         }, 10);
                     }
                 });
-                $('.main').find('.active .desc').stop().delay(1000).animate({
+                $('.main').find('.active .desc').stop().delay(500).animate({
                     'marginLeft': '25%'
-                }, 1000).delay(200).animate({
+                }, 500).delay(200).animate({
                     'width': '75%',
                     'height': '100%',
                     'padding-top': '80px'
-                }, 1000);
+                }, 500);
 
                 // Make room for scrollbar
                 $("header").css("width", "calc(100% - 14px)");
