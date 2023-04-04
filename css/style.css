@@ -57,9 +57,9 @@ CSS3 ANIMATIONS
 }
 
 @font-face {
-    src: url('/fonts/ubuntu-regular-webfont.ttf');
+    src: url('/fonts/ubuntu-italic-webfont.ttf');
     font-family: 'mcoitalic';
-    font-weight: normal;
+    font-weight: 100;
     font-style: italic;
 }
 
@@ -264,6 +264,7 @@ strong {
 i {
     font-family: 'mcoitalic';
     font-style: italic;
+    font-weight: 100;
 }
 
 label {
