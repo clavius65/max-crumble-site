@@ -1,11 +1,19 @@
-var AudioPlayer = null;
-var AudioPlayerNode = null;
-var AudioPlayerContainer = null;
-var AllTracks = new Array();
-var CurrentTrack = null;
-var playedOnce = false;
-var singlePlay = false;
-var sortMode = 'newest';  // oldest, newest, nameA, nameZ
+let AudioPlayer = null;
+let AudioPlayerNode = null;
+let AudioPlayerContainer = null;
+let AllTracks = new Array();
+let CurrentTrack = null;
+let playedOnce = false;
+let singlePlay = false;
+let sortMode = 'newest';  // oldest, newest, nameA, nameZ
+
+// Name of album/track to play when user first clicks on "Music" section
+// In HTML these are represented with the following elements:
+//     <div class="album" data-title="<< FIRST_SONG_ALBUM >>" ...>
+//     <li class="audio-track" data-track= "<< FIRST_SONG_TRACK >>" ...>
+let FIRST_SONG_ALBUM = "talisman";
+let FIRST_SONG_TRACK = "care";
+
 
 $(function() {
 
@@ -19,7 +27,7 @@ $(function() {
     wireAudioTracks();
     wirePanels(window.location.pathname === "/");
 
-    var parts = getRouteParts(window.location.pathname);
+    let parts = getRouteParts(window.location.pathname);
     handleRoute(parts);
 
     history.replaceState(null, null, null);
@@ -68,8 +76,8 @@ function wireAudioTracks() {
                         $(CurrentTrack).removeClass('playing');
                         $(CurrentTrack).parents('.album').find('.album-title').removeClass('audio-list-player-playing');
 
-                        var idx = $.inArray(CurrentTrack, AllTracks);
-                        var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
+                        let idx = $.inArray(CurrentTrack, AllTracks);
+                        let nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
                         $(nextTrack).click();
 
                         if ($(window).width() > 480) {
@@ -103,8 +111,8 @@ function wireAudioTracks() {
                     action: function(player, media) {
 
                         if (CurrentTrack != null) {
-                            var idx = $.inArray(CurrentTrack, AllTracks);
-                            var prevTrack = (idx > 0) ? AllTracks[idx - 1] : AllTracks[$(AllTracks).size() - 1];
+                            let idx = $.inArray(CurrentTrack, AllTracks);
+                            let prevTrack = (idx > 0) ? AllTracks[idx - 1] : AllTracks[$(AllTracks).size() - 1];
                             $(prevTrack).trigger('click');
 
                             if ($(window).width() > 480) {
@@ -122,8 +130,8 @@ function wireAudioTracks() {
                     action: function(player, media) {
 
                         if (CurrentTrack != null) {
-                            var idx = $.inArray(CurrentTrack, AllTracks);
-                            var nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
+                            let idx = $.inArray(CurrentTrack, AllTracks);
+                            let nextTrack = (idx + 1 < $(AllTracks).size()) ? AllTracks[idx + 1] : AllTracks[0];
                             $(nextTrack).trigger('click');
 
                             if ($(window).width() > 480) {
@@ -150,7 +158,7 @@ function wireAudioTracks() {
                             }
 
                             // 5%
-                            var newTime = Math.max(media.currentTime - player.options.defaultSeekBackwardInterval(media), 0);
+                            let newTime = Math.max(media.currentTime - player.options.defaultSeekBackwardInterval(media), 0);
                             media.setCurrentTime(newTime);
                         }
                     }
@@ -163,7 +171,7 @@ function wireAudioTracks() {
                     action: function(player, media) {
                         if (!isNaN(media.duration) && media.duration > 0) {
                             // 5%
-                            var newTime = Math.min(media.currentTime + player.options.defaultSeekForwardInterval(media), media.duration);
+                            let newTime = Math.min(media.currentTime + player.options.defaultSeekForwardInterval(media), media.duration);
                             media.setCurrentTime(newTime);
                         }
                     }
@@ -185,6 +193,14 @@ function wireAudioTracks() {
 
     // Hide player initially
     $('div.audio-list-player').fadeOut();
+}
+
+function findTrack(album, song) {
+    return AllTracks.find(t => {
+       let title = $(t).closest(".album").data("title");
+       let track = $(t).data("track");
+       return (title === album && track === song);
+    });
 }
 
 function wirePanels(startMusic) {
@@ -209,7 +225,7 @@ function wirePanels(startMusic) {
     $("#albumSort").click(toggleSortChoices);
 
     $(".sort-choice").click(function(e) {
-        var sort = $(this).data("sort");
+        let sort = $(this).data("sort");
         albumSort(sort);
         e.preventDefault();
 
@@ -224,7 +240,10 @@ function wirePanels(startMusic) {
         $('.column.albums').one("click", function(event) {
             if (!playedOnce) {
                 playedOnce = true;
-                var firstTrack = AllTracks[0];
+                // let firstTrack = AllTracks[0];
+                let firstTrack = findTrack(FIRST_SONG_ALBUM, FIRST_SONG_TRACK);
+                if (firstTrack === undefined)
+                    firstTrack = AllTracks[0];
                 $(firstTrack).click();
             }
         });
@@ -240,7 +259,7 @@ function handleRoute(parts, firstLoad) {
     // Handle path in URL
     if (parts.length > 0) {
 
-        var route = parts[0];
+        let route = parts[0];
         switch (route) {
 
             case "about": {
@@ -249,19 +268,19 @@ function handleRoute(parts, firstLoad) {
             }
 
             case "music": {
-                var albums = $('.column.albums');
+                let albums = $('.column.albums');
                 albums.click();
 
                 if (parts.length > 1) {
 
-                    var title = parts[1];
-                    var album = $(albums).find('.album').filter(function(idx) {
+                    let title = parts[1];
+                    let album = $(albums).find('.album').filter(function(idx) {
                         return ($(this).data("title") === title);
                     });
 
-                    var trackEl;
+                    let trackEl;
                     if (parts.length > 2) {
-                        var sel = ".audio-track[data-track='" + parts[2] + "']";
+                        let sel = ".audio-track[data-track='" + parts[2] + "']";
                         trackEl = $(album).find(sel).find('a');
                         singlePlay = true;
                     } else {
@@ -295,20 +314,20 @@ function getRouteParts(url) {
     if ((url === undefined) || (url === null))
         return [];
 
-    var parts = $(url.split("/")).filter(function(idx, el) {
+    let parts = $(url.split("/")).filter(function(idx, el) {
         return (el !== "") && (el !== null);
     }).toArray();
     return parts;
 }
 
 function onClickClose(e) {
-    var url = "/";
+    let url = "/";
     history.pushState(url, "", url);
 }
 
 function toggleSortChoices(e) {
 
-    var btn = $(e.target);
+    let btn = $(e.target);
 
     if ($(btn).hasClass("sort-active")) {
         $(".sort-choice").hide();
@@ -322,8 +341,8 @@ function toggleSortChoices(e) {
 }
 
 function albumSort(mode) {
-    var wrapper = $('.albums .grids');
-    var footer = $(wrapper).find('footer');
+    let wrapper = $('.albums .grids');
+    let footer = $(wrapper).find('footer');
 
     $(".sort-choice").removeClass("sort-active");
     $(".sort-choice[data-sort=" + mode + "]").addClass("sort-active");
@@ -365,9 +384,9 @@ function albumSort(mode) {
 
 function onClickTrack(e) {
 
-    var path = $('a', this).attr('href');
-    var song = $('a', this).text();
-    var composer = $('span', this).text();
+    let path = $('a', this).attr('href');
+    let song = $('a', this).text();
+    let composer = $('span', this).text();
 
     e.preventDefault();
 
@@ -394,8 +413,8 @@ function onClickTrack(e) {
 function playerChange() {
 
     // Visual cue for the current song box
-    //var songElement = $('h4', '.mejs__controls');
-    var songElement = $('h4', '.audio-list-player');
+    //let songElement = $('h4', '.mejs__controls');
+    let songElement = $('h4', '.audio-list-player');
 
     $(songElement).css('webkitAnimationName', '');
     setTimeout(function() {
@@ -409,17 +428,17 @@ function pushCurrentTrackState(includeState) {
     if ((CurrentTrack === null) || (CurrentTrack === undefined))
         return;
 
-    var root = $(CurrentTrack).parents('.albums').data("group");
+    let root = $(CurrentTrack).parents('.albums').data("group");
     if ((root === null) || (root === undefined))
         return;
 
-    var albumName = $(CurrentTrack).parents('.album').data("title");
-    var trackName = $(CurrentTrack).data("track");
-    var url = root + "/" + albumName + "/" + trackName;
-    var state = (includeState === true) ? url : null;
+    let albumName = $(CurrentTrack).parents('.album').data("title");
+    let trackName = $(CurrentTrack).data("track");
+    let url = root + "/" + albumName + "/" + trackName;
+    let state = (includeState === true) ? url : null;
     history.pushState(state, null, url);
 
-    var trackTitle = $(CurrentTrack).find("a").text();
+    let trackTitle = $(CurrentTrack).find("a").text();
     document.title = "Max Crumble Orchestra - " + trackTitle;
 }
 
@@ -441,7 +460,7 @@ function onPopState(event) {
     console.info("PopState --> " + event.state);
 
     if (event.state !== null) {
-        var parts = getRouteParts(event.state);
+        let parts = getRouteParts(event.state);
         handleRoute(parts);
     }
 }
