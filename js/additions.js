@@ -11,8 +11,10 @@ let sortMode = 'newest';  // oldest, newest, nameA, nameZ
 // In HTML these are represented with the following elements:
 //     <div class="album" data-title="<< FIRST_SONG_ALBUM >>" ...>
 //     <li class="audio-track" data-track= "<< FIRST_SONG_TRACK >>" ...>
-let FIRST_SONG_ALBUM = "talisman";
-let FIRST_SONG_TRACK = "care";
+let FIRST_SONG_ALBUM = "";
+let FIRST_SONG_TRACK = "";
+// let FIRST_SONG_ALBUM = "talisman";
+// let FIRST_SONG_TRACK = "care";
 
 
 $(function() {
