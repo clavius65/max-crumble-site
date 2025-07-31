@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /audio/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /gallery/
+Disallow: /images/
+Disallow: /js/
+Allow: /
+Crawl-delay: 10
+Sitemap: http://www.maxcrumble.com/sitemap.xml
+Host: www.maxcrumble.com
