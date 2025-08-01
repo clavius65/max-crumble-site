@@ -1859,3 +1859,12 @@ header h1 {
     -o-animation-name: greenGlow;
     animation-name: greenGlow;
 }
+
+div.disbanded {
+    h3 {
+        color: rgb(217, 58, 255);
+    }
+    p {
+        color: rgb(217, 58, 255);
+    }
+}

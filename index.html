@@ -9,7 +9,7 @@
     <!-- CSS FILES  -->
     <link href="/css/animate.css" rel="stylesheet" type="text/css"/>
     <link href="/css/normalize.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/style.css?v=2024-01-24" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css?v=2025-07-31" rel="stylesheet" type="text/css"/>
     <link href="/css/grid.css" rel="stylesheet" type="text/css"/>
     <link href="/css/media.css" rel="stylesheet" type="text/css"/>
     <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
@@ -44,16 +44,25 @@
                 <h1 class="page-title">About</h1>
 
                 <div class="grids">
-                    <div class=grid-4">
+
+                    <div class=grid-4" id="band_historical_photo">
                         <img class="photo cover" src="/images/photos/band_1905_med.jpg" alt=""/>
                     </div>
                     <hr/>
 
-                    <div class="grid-6">
+                    <div class="grid-12 disbanded">
+                        <h3>We're Done!</h3>
+                        <p>
+                            After 18+ years of making music, the Max Crumble Orchestra has disbanded. We are grateful to all our fans, friends, and family who have supported us over the years.
+                            Our music will still be available online, but we will not be performing or recording new material.
+                        </p>
+                    </div>
+
+                    <div class="grid-6" id="mission">
                         <h3>Mission</h3>
                         <p>
-                            The mission of the Max Crumble Orchestra (MCO) is to bring so-called elevator music to the
-                            masses. MCO is named in homage of Klaus “Max” Krumski, the legendary Hungarian bandleader
+                            The mission of the Max Crumble Orchestra (MCO) was to bring so-called elevator music to the
+                            masses. MCO was named in homage of Klaus “Max” Krumski, the legendary Hungarian bandleader
                             generally regarded as the inventor of elevator music in 1928.
                         </p>
                         <p>
@@ -68,7 +77,7 @@
                         </p>
                     </div>
 
-                    <div class="grid-6">
+                    <div class="grid-6" id="history">
                         <h3>History</h3>
                         <p>
                             Max Crumble Orchestra (MCO) was formed in 2006 when two of its members (John and Rick) were separately hired to play Christmas music at
@@ -82,11 +91,11 @@
                         </p>
                     </div>
 
-                    <div class=grid-6">
+                    <div class=grid-6" id="band_photo_2010">
                         <img class="cover" src="/images/photos/band_2010.jpg" alt="" />
                     </div>
 
-                    <div class="grid-6">
+                    <div class="grid-6" id="band_members">
 
                         <h4>Max Crumble</h4>
                         <p>
@@ -105,7 +114,7 @@
                     </div>
                     <br/>
 
-                    <div class="grid-6">
+                    <div class="grid-6" id="thanks">
                         <h3>gratus animus</h3>
 
                         <p>
@@ -182,6 +191,17 @@
                     <span class="sort-icon sort-choice" data-sort="newest"></span>
                 </h1>
                 <div class="grids">
+
+                    <!-- Disbanded -->
+                    <div class="album" data-title="disbanded" data-date="2025">
+                        <div class="grid-12 disbanded">
+                            <h3>We're Done!</h3>
+                            <p>
+                                After 18+ years of making music, the Max Crumble Orchestra has disbanded. We are grateful to all our fans, friends, and family who have supported us over the years.
+                                Our music will still be available online, but we will not be performing or recording new material.
+                            </p>
+                        </div>
+                    </div>
 
                     <!-- Year of the Rabbit -->
                     <div class="album" data-title="rabbit" data-date="2023.2">
@@ -686,6 +706,15 @@
 
                 <div class="grids">
 
+                    <!-- Disbanded -->
+                    <div class="grid-12 disbanded">
+                        <h3>We're Done!</h3>
+                        <p>
+                            After 18+ years of making music, the Max Crumble Orchestra has disbanded. We are grateful to all our fans, friends, and family who have supported us over the years.
+                            Our content will still be available online, but we will not be creating anything new.
+                        </p>
+                    </div>
+
                     <!-- Summer Party -->
                     <div class="grid-4">
                         <a class="post-img" href="/video/killerWhale.mp4" target="_blank"><img src="/video/killerWhale.jpg" alt=""/></a>
@@ -895,39 +924,14 @@
                 <h1 class="page-title">Contact</h1>
 
                 <div class="grids">
-                    <div class="grid-6">
-                        <h3>Hello!</h3>
+                    <div class="grid-12 disbanded">
+                        <h3>We're Done!</h3>
                         <p>
-                            We're based in the Greater Puget Sound area in Washington state. If you'd like more information about MCO or would like us to
-                            play for your event please contact us!
+                            After 18+ years of making music, the Max Crumble Orchestra has disbanded. We are grateful to all our fans, friends, and family who have supported us over the years.
+                            Our music will still be available online, but we will not be performing or recording new material.
                         </p>
-                        <p>
-                            <label>Location:</label> Seattle, WA
-                        </p>
-                        <p>
-                            <label>Email:</label> <a href="/mailto:info@maxcrumble.com?subject=Info%20Request">info@maxcrumble.com</a>
-                        </p>
-                        <!--
-                        <div class="socialbox">
-                            <h3>Tell Others</h3>
-                            <ul class="social-icons">
-                                <li><a href="/"><img class="social-icon" src="/images/social-icons/social_facebook.png" alt="Facebook"/></a></li>
-                                <li><a href="/"><img class="social-icon" src="/images/social-icons/social_twitter.png" alt="Twitter"/></a></li>
-                            </ul>
-                        </div>
-                        -->
                     </div>
-                    <div class="grid-6">
-                        <h3>Send a Message</h3>
-                        <div class="contactform">
-                            <form id="contactForm" action="processForm.php" method="post">
-                                <input type="text" name="senderName" id="senderName" required="required" maxlength="40" placeholder="Your Name" autocomplete="name"/>
-                                <input type="email" name="senderEmail" id="senderEmail" required="required" maxlength="50" placeholder="Your E-Mail" autocomplete="email"/>
-                                <textarea name="message" id="message" required="required" placeholder="Your Message"></textarea>
-                                <input type="submit" id="sendMessage" name="sendMessage" class="button" value="Send Message"/>
-                            </form>
-                        </div>
-                    </div>
+
                     <!-- FOOTER  -->
                     <footer>
                         <div class="credits">
